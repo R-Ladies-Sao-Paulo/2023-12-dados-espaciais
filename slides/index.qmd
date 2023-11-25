@@ -1,0 +1,231 @@
+---
+title: "Trabalhando com dados espaciais no R"
+author: "Lais Brasileiro + Beatriz Milz"
+date: "2023-12-12"
+format: 
+  rladies-revealjs:
+    code-link: true
+    footer: "Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html) e [Quarto R-Ladies Theme](https://github.com/beatrizmilz/quarto-rladies-theme#quarto-r-ladies-theme)."
+incremental: false
+---
+
+```{r}
+library(geobr)
+```
+
+
+# Quem somos?
+
+## Lais Brasileiro
+
+-   Me chamo Lais Brasileiro, sou bióloga, cearense e doutoranda em Ecologia pela Universidade de Brasília (UnB). Sempre trabalhei com conservação em suas diversas faces. Atualmente meu trabalho envolve planejamento sistemático para a conservação.
+
+-   R faz parte do meu cotidiano de pesquisa e participo da coorganização do R-ladies Brasília;
+
+-   Tenho como ídolos na minha vida Patti Smith e Marina Silva. E na esfera fictícia, Buffy (sim, a caça vampiros).
+
+## Beatriz Milz
+
+-   Doutoranda em Ciência Ambiental no IEE/USP
+
+-   Professora de R na [Curso-R](https://curso-r.com/)
+
+-   Co-organizadora da [RLadies São Paulo](https://rladies-sp.org)
+
+-   Experiência com dados espaciais:
+
+    -   2014-2015: Núcleo técnico de Gestão Ambiental/Secretaria de Segurança Urbana/Prefeitura Municipal de São Paulo
+    -   2016-2018: Mestrado no Programa de Pós Graduação em Análise Ambiental Integrada na UNIFESP, Campus Diadema.
+    -   2019 em diante: aulas na Curso-R, projetos de consultoria, minha pesquisa de doutorado, etc.
+
+# Plano para hoje!
+
+-   Conceitos básicos para começar a trabalhar com dados espaciais no R
+
+- Lista de principais pacotes
+
+-   Um exemplo prático
+
+-   Links úteis para aprender mais
+
+# Conceitos importantes
+
+# Modelos de dados geográficos
+
+![](img/vector-raster_1644589693.jpeg){fig-align="center"}
+
+::: footer
+Fonte da imagem: <https://guides.lib.uw.edu/>
+:::
+
+## Dados vetoriais
+
+-   Representação do mundo por pontos, linhas e polígonos.
+
+![](img/exemplo-vetores.png){fig-align="center"}
+
+Fonte: Geocomputation with R
+
+## Dados vetoriais
+
+- Exemplos:
+
+  -   **Pontos**: localização de uma escola, ponto de coleta, etc.
+
+  -    **Linhas**: ruas/estradas/rodovias, rios, etc.
+
+  -   **Polígonos**: delimitação de cidades, estados, países, etc.
+
+
+## Dados matriciais (ou raster)
+
+- Representação do mundo em uma grade contínua de células de tamanho constante (regular grids)
+
+- Informação agregada espacialmente em uma dada resolução (consistente e escalonável)
+
+![](img/exemplo-raster.png){fig-align="center"}
+
+## Dados matriciais (ou raster)
+
+
+![](img/raster-tipo-dado.png){fig-align="center"}
+
+## Dados matriciais (ou raster)
+
+
+![](img/raster-camadas.png){fig-align="center"}
+
+
+## Dados matriciais (ou raster)
+
+- Exemplos:
+
+  -   **Imagens de satélite**.
+
+  -   **Modelos digitais de elevação**.
+
+  -   **Mapas de uso e cobertura da terra**.
+  
+## Sistema de coordenadas geográficas e projeção espacial
+
+
+- **CRS:** Define como os elementos espaciais do dado se relaciona com a superfície da Terra.
+
+- **Sistema de coordenadas geográficas** identificam qualquer lugar na terra a partir de dois valores:
+
+  -   **Longitude**: distância em graus de um ponto até o Meridiano de Greenwich (0°).
+  
+  
+  -   **Latitude**: distância em graus de um ponto até o Equador (0°).
+
+
+**Importante:** As posições de Long e Lat são medidas em distância angular (graus).
+
+##
+
+![](img/CRS.png){fig-align="center"}
+
+Ponto azul representa a origem do CRS e ponto vermelho a coordenada de localização de Londres.
+
+## Projeções
+
+Para a definição de um sistema de coordenadas geográficas é necessário escolher uma forma de representar a superfície da Terra:
+
+![](img/datum.png){fig-align="center"}
+
+## Projeções
+
+- Mapas dependem de uma **projeção** que se refere a tradução da superfície tridimensional da terra em um plano cartesiano.
+
+- Projeções possuem ponto de origem, valores de XY e uma unidade linear de medida.
+
+- [Projeções sempre geram distorções](https://www.jasondavies.com/maps/transition/).
+
+Fonte: https://gisgeography.com/map-projections/
+
+## Exemplo: Projeção cilíndrica
+
+![](img/projecao-cilindrica.png){fig-align="center"}
+
+Fonte: https://gisgeography.com/map-projections/
+
+## Exemplo: Projeção cônica
+
+![](img/projecao-conica.png){fig-align="center"}
+
+Fonte: https://gisgeography.com/map-projections/
+
+## Exemplo: Projeção plana
+
+![](img/projecao-plana.png){fig-align="center"}
+
+Fonte: https://gisgeography.com/map-projections/
+
+# Ciclo de ciência de dados
+
+## Ciclo de ciência de dados
+
+![](img/ciclo-ciencia-de-dados.png){fig-align="center"}
+
+## Ciclo de análise de dados espaciais
+
+- É similar ao ciclo de ciência de dados!
+
+## Principais pacotes
+
+
+- **sf:** Pacote para manipulação de dados espaciais vetoriais.
+
+- **terra**: Pacote para manipulação de dados espaciais vetoriais e matriciais. 
+
+
+## Pacotes importantes para importação de dados
+
+- **geobr**: Pacote para download de dados espaciais do Brasil. Ex. `geobr::read_state()`,  `geobr::read_municipality()`, etc.
+
+-  **[getSpatialData](https://jakob.schwalb-willmann.de/getSpatialData/)** - Pacote para fazer download de imagens de satélite. 
+
+## Pacotes úteis para transformação de dados
+
+- **dplyr**: Pacote para manipulação de dados. 
+
+- **tidyr**: Pacote para organização de dados.
+
+
+
+
+## Principais pacotes: Visualizar
+
+- **ggplot2**: Pacote para visualização de dados. Possui funções para visualização de dados espaciais vetoriais (`ggplot2::geom_sf()`).
+
+- **tmap**: Pacote para visualização de dados espaciais vetoriais e matriciais. Possui funções para visualização de dados espaciais vetoriais (`tmap::tm_shape()`, `tmap::tm_fill()`, etc.) e matriciais (`tmap::tm_rgb()`).
+
+- **leaflet**: Pacote para visualização de dados espaciais vetoriais e matriciais. Possui funções para visualização de dados espaciais vetoriais (`leaflet::addPolygons()`, `leaflet::addCircles()`, etc.) e matriciais (`leaflet::addRasterImage()`).
+
+## Principais pacotes: Modelar
+
+- **terra**. Ex. `terra::predict()`.
+
+# Vamos para um exemplo prático!
+
+# Links úteis para aprender mais
+
+-   [Geocomputation with R](https://geocompr.robinlovelace.net/)
+
+- [Artigo: Open-source tools in R for Landscape Ecology](https://link.springer.com/article/10.1007/s40823-021-00067-y)
+
+-   [Livro Análises Ecológicas no R - Capítulo 15: Dados geoespaciais](https://analises-ecologicas.com/cap15)
+
+- [Introdução à acessibilidade urbana - um guia prático em R](https://ipeagit.github.io/intro_access_book/pt/)
+
+# Comunidade #RSpatial
+
+- É a comunidade de pessoas que utilizam o R para análise de dados espaciais
+
+- [GitHub](https://github.com/r-spatial)
+
+- [Guia](https://rspatial.org/index.html)
+
+- [Task View do CRAN](https://cran.r-project.org/web/views/Spatial.html)
+
+# Obrigada!

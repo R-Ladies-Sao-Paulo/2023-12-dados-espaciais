@@ -1,0 +1,134 @@
+---
+title: "Conhecendo a R-Ladies São Paulo"
+author: "[R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/)"
+date: "2023-12-12"
+format: 
+  rladies-revealjs:
+    footer: "Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html) e [Quarto R-Ladies Theme](https://github.com/beatrizmilz/quarto-rladies-theme#quarto-r-ladies-theme)."
+incremental: false
+---
+
+## O que é a R-Ladies?
+
+R-Ladies é uma organização mundial cuja missão é promover a diversidade de gênero na comunidade da linguagem R.
+
+R-Ladies São Paulo integra, orgulhosamente, a organização R-Ladies Global, em São Paulo.
+
+## Como?
+
+Através de meetups e mentorias em um ambiente seguro e amigável.
+
+Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, quem tiver interesse na linguagem será bem-vinda, independente do nível de conhecimento.
+
+::: footer
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/), [Meetup - São Paulo](https://www.meetup.com/rladies-sao-paulo/)
+:::
+
+## Para quem?
+
+Nosso principal público-alvo são as pessoas que se identificam com gêneros sub-representados na comunidade R, portanto: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.
+
+## Missão
+
+Como uma iniciativa de diversidade, a missão das R-Ladies é alcançar uma representação proporcional de pessoas de gêneros atualmente sub-representados na comunidade R, incentivando, inspirando e capacitando-as.
+
+## Código de conduta
+
+A R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todas as pessoas partcicipantes, desta forma, não é tolerada nenhuma forma de assédio. [Código de conduta - R-Ladies](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
+
+::: footer
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/), [Meetup - São Paulo](https://www.meetup.com/rladies-sao-paulo/)
+:::
+
+## R-Ladies no Brasil
+
+Existem vários capítulos no Brasil. O capítulo de Goiânia realiza mensalmente eventos online.
+
+Capítulos ativos (realizaram eventos em 2023):
+
+-   [R-Ladies Goiânia](https://www.meetup.com/rladies-goiania/)
+
+-   [R-Ladies Vitória](https://www.meetup.com/rladies-vitoria/)
+
+-   [R-Ladies Salvador](https://www.meetup.com/rladies-salvador/)
+
+-   [R-Ladies Ribeirão Preto](https://www.meetup.com/rladies-ribeirao-preto/)
+
+## R-Ladies em São Paulo
+
+```{r out.width="65%", fig.align='center'}
+knitr::include_graphics("https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg")
+```
+
+-   **Primeiro encontro da R-Ladies São Paulo** - Agosto/2018
+
+## GuGuDaDados
+
+Primeira edição em novembro/2022.
+
+![](https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados2.jpeg){fig-align="center" width="45%"}
+
+## Blog: rladies-sp.org
+
+-   Textos escritos por pessoas da comunidade
+
+<center>
+
+<embed type="text/html" src="https://rladies-sp.org/" width="90%" height="500">
+
+</center>
+
+## Apoio financeiro
+
+![R Consortium Logo](https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png){width="50%" fig-align="center"}
+
+-   Auxílio transporte e alimentação para o evento;
+
+-   Pagamento da professora que acompanha o Gugudadados;
+
+-   Camisetas para equipe de organização;
+
+## Saiba mais sobre a R-Ladies
+
+-   R-Ladies Global: [Website](https://rladies.org/), [<i class="fab fa-twitter"></i> Twitter](https://twitter.com/rladiesglobal)
+
+-   R-Ladies São Paulo:
+
+    -   Blog: <https://rladies-sp.org/>
+    -   [<i class="fab fa-linkedin"></i> Linkedin](https://www.linkedin.com/company/r-ladies-sao-paulo/)\
+    -   [<i class="fab fa-twitter"></i> Twitter](https://twitter.com/RLadiesSaoPaulo)
+    -   [<i class="fab fa-instagram"></i> Instagram](https://instagram.com/RLadiesSaoPaulo)
+    -   [<i class="fab fa-facebook"></i> Facebook](https://facebook.com/RLadiesSaoPaulo)
+    -   [<i class="fab fa-meetup"></i> Meetup](https://www.meetup.com/rladies-sao-paulo/)
+    -   [<i class="fab fa-github"></i> GitHub](https://github.com/R-Ladies-Sao-Paulo)
+    -   [<i class="fab fa-youtube"></i> Youtube](https://www.youtube.com/c/RLadiesSãoPaulo)
+
+<!-- inicio font awesome -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```
+<!-- final font awesome -->
+
+# RECADOS :)
+
+
+## Bolsas Curso-R 2024
+
+-   Formulário de bolsa de diversidade da Curso-R para 2024 está disponível em: <https://forms.gle/5a6zrCwDadkdMNKw9>
+
+![](img/bolsa-curso-r.png){fig-align="center"}
+
+## Tradução R4DS
+
+[![](img/R4DS.png){fig-align="center"}](https://cienciadedatos.github.io/pt-r4ds/)
+
+<https://cienciadedatos.github.io/pt-r4ds/>
+
+## Grupo de estudos para 2024
+
+-   Interesse: <https://forms.gle/fEAptgHgNXbLTPWy6>
+
+-   Mais informações: <https://github.com/R-Ladies-Sao-Paulo/2024-grupo-de-estudos-r4ds/tree/main#readme>
+
+![](img/grupo de estudos.png){fig-align="center" width="30%"}
