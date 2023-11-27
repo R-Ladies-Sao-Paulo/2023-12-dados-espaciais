@@ -246,6 +246,13 @@ Fonte: <https://github.com/rstudio/cheatsheets/blob/main/sf.pdf>
  
 ![](https://user-images.githubusercontent.com/23257860/84061405-2651d900-a9be-11ea-8038-075efe9a3f36.png){fig-align="center" width="90%"}
 
+## [parzer](https://docs.ropensci.org/parzer/)
+
+- Pacote para ajudar a limpar coordenadas geográficas para o formato que o R entende.
+
+![](https://docs.ropensci.org/parzer/logo.png){fig-align="center" width="90%"}
+
+
 ##  [geobr](https://ipeagit.github.io/geobr/)
 
 -   O pacote **geobr** disponibiliza funções para obter diversas bases de dados **espaciais** oficiais do Brasil.
