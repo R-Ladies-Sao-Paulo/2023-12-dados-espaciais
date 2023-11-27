@@ -13,7 +13,6 @@ incremental: false
 library(geobr)
 ```
 
-
 # Quem somos?
 
 ## Lais Brasileiro
@@ -42,13 +41,15 @@ library(geobr)
 
 -   Conceitos básicos para começar a trabalhar com dados espaciais no R
 
-- Lista de principais pacotes
+-   Lista de principais pacotes
 
 -   Um exemplo prático
 
 -   Links úteis para aprender mais
 
 # Conceitos importantes
+
+[![Principal referência: Geocomputation with R](https://r.geocompx.org/images/cover.png){fig-align="center" width="40%"}](https://r.geocompx.org/)
 
 # Modelos de dados geográficos
 
@@ -64,68 +65,80 @@ Fonte da imagem: <https://guides.lib.uw.edu/>
 
 ![](img/exemplo-vetores.png){fig-align="center"}
 
-Fonte: Geocomputation with R
+::: footer
+Fonte: [Geocomputation with R](https://r.geocompx.org/spatial-class)
+:::
 
 ## Dados vetoriais
 
-- Exemplos:
+-   Exemplos:
 
-  -   **Pontos**: localização de uma escola, ponto de coleta, etc.
+    -   **Pontos**: localização de uma escola, ponto de coleta, etc.
 
-  -    **Linhas**: ruas/estradas/rodovias, rios, etc.
+    -   **Linhas**: ruas/estradas/rodovias, rios, etc.
 
-  -   **Polígonos**: delimitação de cidades, estados, países, etc.
-
+    -   **Polígonos**: delimitação de cidades, estados, países, etc.
 
 ## Dados matriciais (ou raster)
 
-- Representação do mundo em uma grade contínua de células de tamanho constante (regular grids)
+-   Representação do mundo em uma grade contínua de células de tamanho constante (regular grids)
 
-- Informação agregada espacialmente em uma dada resolução (consistente e escalonável)
+-   Informação agregada espacialmente em uma dada resolução (consistente e escalonável)
 
 ![](img/exemplo-raster.png){fig-align="center"}
 
-## Dados matriciais (ou raster)
+::: footer
+Fonte: [Geocomputation with R](https://r.geocompx.org/spatial-class)
+:::
 
+## Dados matriciais (ou raster)
 
 ![](img/raster-tipo-dado.png){fig-align="center"}
 
-## Dados matriciais (ou raster)
+::: footer
+Fonte: [Geocomputation with R](https://r.geocompx.org/spatial-class)
+:::
 
+## Dados matriciais (ou raster)
 
 ![](img/raster-camadas.png){fig-align="center"}
 
+::: footer
+Fonte: [Imagem 1](https://www.neonscience.org/resources/learning-hub/tutorials/dc-multiband-rasters-r) e [Imagem 2](https://edzer.github.io/UseR2019/part1.html).
+:::
+
 
 ## Dados matriciais (ou raster)
 
-- Exemplos:
+-   Exemplos:
 
-  -   **Imagens de satélite**.
+    -   **Imagens de satélite**.
 
-  -   **Modelos digitais de elevação**.
+    -   **Modelos digitais de elevação**.
 
-  -   **Mapas de uso e cobertura da terra**.
-  
+    -   **Mapas de uso e cobertura da terra**.
+
 ## Sistema de coordenadas geográficas e projeção espacial
 
+-   **CRS:** Define como os elementos espaciais do dado se relaciona com a superfície da Terra.
 
-- **CRS:** Define como os elementos espaciais do dado se relaciona com a superfície da Terra.
+-   **Sistema de coordenadas geográficas** identificam qualquer lugar na terra a partir de dois valores:
 
-- **Sistema de coordenadas geográficas** identificam qualquer lugar na terra a partir de dois valores:
+    -   **Longitude**: distância em graus de um ponto até o Meridiano de Greenwich (0°).
 
-  -   **Longitude**: distância em graus de um ponto até o Meridiano de Greenwich (0°).
-  
-  
-  -   **Latitude**: distância em graus de um ponto até o Equador (0°).
-
+    -   **Latitude**: distância em graus de um ponto até o Equador (0°).
 
 **Importante:** As posições de Long e Lat são medidas em distância angular (graus).
 
-##
+## 
 
 ![](img/CRS.png){fig-align="center"}
 
 Ponto azul representa a origem do CRS e ponto vermelho a coordenada de localização de Londres.
+
+::: footer
+Fonte: [Geocomputation with R](https://r.geocompx.org/spatial-class)
+:::
 
 ## Projeções
 
@@ -133,33 +146,45 @@ Para a definição de um sistema de coordenadas geográficas é necessário esco
 
 ![](img/datum.png){fig-align="center"}
 
+::: footer
+Fonte: ??
+:::
+
 ## Projeções
 
-- Mapas dependem de uma **projeção** que se refere a tradução da superfície tridimensional da terra em um plano cartesiano.
+-   Mapas dependem de uma **projeção** que se refere a tradução da superfície tridimensional da terra em um plano cartesiano.
 
-- Projeções possuem ponto de origem, valores de XY e uma unidade linear de medida.
+-   Projeções possuem ponto de origem, valores de XY e uma unidade linear de medida.
 
-- [Projeções sempre geram distorções](https://www.jasondavies.com/maps/transition/).
+-   [Projeções sempre geram distorções](https://www.jasondavies.com/maps/transition/).
 
-Fonte: https://gisgeography.com/map-projections/
+::: footer
+Fonte: <https://gisgeography.com/map-projections/>
+:::
 
 ## Exemplo: Projeção cilíndrica
 
 ![](img/projecao-cilindrica.png){fig-align="center"}
 
-Fonte: https://gisgeography.com/map-projections/
+::: footer
+Fonte: <https://gisgeography.com/map-projections/>
+:::
 
 ## Exemplo: Projeção cônica
 
 ![](img/projecao-conica.png){fig-align="center"}
 
-Fonte: https://gisgeography.com/map-projections/
+::: footer
+Fonte: <https://gisgeography.com/map-projections/>
+:::
 
 ## Exemplo: Projeção plana
 
 ![](img/projecao-plana.png){fig-align="center"}
 
-Fonte: https://gisgeography.com/map-projections/
+::: footer
+Fonte: <https://gisgeography.com/map-projections/>
+:::
 
 # Ciclo de ciência de dados
 
@@ -167,65 +192,147 @@ Fonte: https://gisgeography.com/map-projections/
 
 ![](img/ciclo-ciencia-de-dados.png){fig-align="center"}
 
+::: footer
+Fonte: [Curso-R](https://livro.curso-r.com/), adaptado de [R for Data Science](https://r4ds.hadley.nz/)
+:::
+
 ## Ciclo de análise de dados espaciais
 
-- É similar ao ciclo de ciência de dados!
-
-## Principais pacotes
+-   As etapas são similares ao ciclo de ciência de dados!
 
 
-- **sf:** Pacote para manipulação de dados espaciais vetoriais.
+# Principais pacotes
 
-- **terra**: Pacote para manipulação de dados espaciais vetoriais e matriciais. 
+## [sf (Simple Features for R)](https://r-spatial.github.io/sf/)
+
+- Pacote para manipulação de dados espaciais vetoriais.
+
+[![](img/sf_horst.png){fig-align="center" width="90%"}](https://github.com/allisonhorst/stats-illustrations)
+
+::: footer
+Fonte da imagem: <https://github.com/allisonhorst/stats-illustrations>
+:::
+
+---
+
+![](img/sf_page-0001.jpg){fig-align="center" width="90%"}
+
+::: footer
+Fonte: <https://github.com/rstudio/cheatsheets/blob/main/sf.pdf>
+:::
+
+---
+
+![](img/sf_page-0002.jpg){fig-align="center" width="90%"}
+
+::: footer
+Fonte: <https://github.com/rstudio/cheatsheets/blob/main/sf.pdf>
+:::
 
 
-## Pacotes importantes para importação de dados
-
-- **geobr**: Pacote para download de dados espaciais do Brasil. Ex. `geobr::read_state()`,  `geobr::read_municipality()`, etc.
-
--  **[getSpatialData](https://jakob.schwalb-willmann.de/getSpatialData/)** - Pacote para fazer download de imagens de satélite. 
-
-## Pacotes úteis para transformação de dados
-
-- **dplyr**: Pacote para manipulação de dados. 
-
-- **tidyr**: Pacote para organização de dados.
 
 
 
+## [terra](https://rspatial.github.io/terra/index.html)
 
-## Principais pacotes: Visualizar
+-  Pacote para manipulação e modelagem de dados espaciais vetoriais e matriciais.
 
-- **ggplot2**: Pacote para visualização de dados. Possui funções para visualização de dados espaciais vetoriais (`ggplot2::geom_sf()`).
+![](https://rspatial.github.io/terra/logo.png){fig-align="center" width="90%"}
 
-- **tmap**: Pacote para visualização de dados espaciais vetoriais e matriciais. Possui funções para visualização de dados espaciais vetoriais (`tmap::tm_shape()`, `tmap::tm_fill()`, etc.) e matriciais (`tmap::tm_rgb()`).
 
-- **leaflet**: Pacote para visualização de dados espaciais vetoriais e matriciais. Possui funções para visualização de dados espaciais vetoriais (`leaflet::addPolygons()`, `leaflet::addCircles()`, etc.) e matriciais (`leaflet::addRasterImage()`).
+## [getSpatialData](https://jakob.schwalb-willmann.de/getSpatialData/)
 
-## Principais pacotes: Modelar
+ - Pacote para fazer download de imagens de satélite.
+ 
+![](https://user-images.githubusercontent.com/23257860/84061405-2651d900-a9be-11ea-8038-075efe9a3f36.png){fig-align="center" width="90%"}
 
-- **terra**. Ex. `terra::predict()`.
+##  [geobr](https://ipeagit.github.io/geobr/)
+
+-   O pacote **geobr** disponibiliza funções para obter diversas bases de dados **espaciais** oficiais do Brasil.
+
+-   O pacote foi desenvolvido e é mantido pela equipe do [IPEA - Instituto de Pesquisa Econômica Aplicada](https://www.ipea.gov.br/portal/).
+
+-   Você pode saber mais no repositório do pacote no GitHub: <https://ipeagit.github.io/geobr/>
+
+![](https://github.com/ipeaGIT/geobr/blob/master/r-package/man/figures/geobr_logo_b.png?raw=true){fig-align="center" width="90%"}
+
+## [geobr](https://ipeagit.github.io/geobr/) - Funções importantes
+
+-   `read_country()`: Delimitação do Brasil
+
+-   `read_state()`: Delimitação dos estados do Brasil
+
+-   `read_state("SP")`: Delimitação de um estado específico, usando a sigla como argumento
+
+-   `read_municipality()`: Delimitação de todos os municípios do Brasil. É uma base pesada!
+
+-   `read_municipality(code_muni = 3550308)`: Delimitação de um município específico, usando o código do IBGE do município.
+
+## [geobr](https://ipeagit.github.io/geobr/) - Consultando todas as funções disponíveis
+
+-   Função `list_geobr()`
+
+```{r}
+#| echo: false
+geobr::list_geobr() |> 
+  dplyr::select(1, 2, 4) |> 
+  reactable::reactable(pagination = TRUE, 
+                       defaultPageSize = 5, class = "smaller")
+```
+
+
+## Pacotes do [tidyverse](https://tidyverse.org)
+
+-   **dplyr**: Pacote para manipulação de dados.
+
+-   **tidyr**: Pacote para organização de dados.
+
+-   **ggplot2**: Pacote para visualização de dados. Possui funções para visualização de dados espaciais vetoriais (`ggplot2::geom_sf()`).
+
+![](https://tidyverse.tidyverse.org/logo.png){fig-align="center" width="90%"}
+
+## [tmap -  thematic maps in R](https://r-tmap.github.io/tmap/)
+
+-  Pacote para visualização de dados espaciais vetoriais e matriciais. 
+
+
+![](https://r-tmap.github.io/tmap/articles/tmap_vv_files/figure-html/unnamed-chunk-6-1.png){fig-align="center" width="90%"}
+
+
+## [leaflet](https://rstudio.github.io/leaflet/)
+
+-   Pacote para visualização interativas de dados espaciais vetoriais e matriciais. 
+
+
+![](img/leaflet.png){fig-align="center" width="90%"}
+
+:::footer
+[Imagem é a captura de tela deste slide](https://beatrizmilz.github.io/2023-04-cervejacomdados-fortaleza/#/usando-os-dados-importados)
+:::
+
 
 # Vamos para um exemplo prático!
 
 # Links úteis para aprender mais
 
+-   [Geocomputation with R - Foundations - Geographic data in R](https://r.geocompx.org/spatial-class)
+
 -   [Geocomputation with R](https://geocompr.robinlovelace.net/)
 
-- [Artigo: Open-source tools in R for Landscape Ecology](https://link.springer.com/article/10.1007/s40823-021-00067-y)
+-   [Artigo: Open-source tools in R for Landscape Ecology](https://link.springer.com/article/10.1007/s40823-021-00067-y)
 
 -   [Livro Análises Ecológicas no R - Capítulo 15: Dados geoespaciais](https://analises-ecologicas.com/cap15)
 
-- [Introdução à acessibilidade urbana - um guia prático em R](https://ipeagit.github.io/intro_access_book/pt/)
+-   [Introdução à acessibilidade urbana - um guia prático em R](https://ipeagit.github.io/intro_access_book/pt/)
 
 # Comunidade #RSpatial
 
-- É a comunidade de pessoas que utilizam o R para análise de dados espaciais
+-   É a comunidade de pessoas que utilizam o R para análise de dados espaciais
 
-- [GitHub](https://github.com/r-spatial)
+-   [GitHub](https://github.com/r-spatial)
 
-- [Guia](https://rspatial.org/index.html)
+-   [Guia](https://rspatial.org/index.html)
 
-- [Task View do CRAN](https://cran.r-project.org/web/views/Spatial.html)
+-   [Task View do CRAN](https://cran.r-project.org/web/views/Spatial.html)
 
 # Obrigada!

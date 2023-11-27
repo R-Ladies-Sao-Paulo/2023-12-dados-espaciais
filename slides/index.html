@@ -320,6 +320,8 @@
       margin-right: 0; 
     }
   </style>
+<script src="index_files/libs/core-js-2.5.3/shim.min.js"></script><script src="index_files/libs/react-18.2.0/react.min.js"></script><script src="index_files/libs/react-18.2.0/react-dom.min.js"></script><script src="index_files/libs/reactwidget-1.0.0/react-tools.js"></script><script src="index_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="index_files/libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="index_files/libs/reactable-binding-0.4.4/reactable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -364,7 +366,7 @@ Lais Brasileiro + Beatriz Milz
 <li><p>Links úteis para aprender mais</p></li>
 </ul></section><section id="conceitos-importantes" class="title-slide slide level1 center"><h1>Conceitos importantes</h1>
 
-</section><section><section id="modelos-de-dados-geográficos" class="title-slide slide level1 center"><h1>Modelos de dados geográficos</h1>
+<img data-src="https://r.geocompx.org/images/cover.png" style="width:40.0%" class="r-stretch quarto-figure-center"><p class="caption">Principal referência: Geocomputation with R</p></section><section><section id="modelos-de-dados-geográficos" class="title-slide slide level1 center"><h1>Modelos de dados geográficos</h1>
 
 <img data-src="img/vector-raster_1644589693.jpeg" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte da imagem: <a href="https://guides.lib.uw.edu/" class="uri">https://guides.lib.uw.edu/</a></p>
@@ -374,7 +376,9 @@ Lais Brasileiro + Beatriz Milz
 <li>Representação do mundo por pontos, linhas e polígonos.</li>
 </ul>
 
-<img data-src="img/exemplo-vetores.png" class="r-stretch quarto-figure-center"><p>Fonte: Geocomputation with R</p>
+<img data-src="img/exemplo-vetores.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://r.geocompx.org/spatial-class">Geocomputation with R</a></p>
+</div>
 </section><section id="dados-vetoriais-1" class="slide level2"><h2>Dados vetoriais</h2>
 <ul>
 <li>
@@ -391,11 +395,20 @@ Lais Brasileiro + Beatriz Milz
 <li><p>Informação agregada espacialmente em uma dada resolução (consistente e escalonável)</p></li>
 </ul>
 
-<img data-src="img/exemplo-raster.png" class="r-stretch quarto-figure-center"></section><section id="dados-matriciais-ou-raster-1" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
+<img data-src="img/exemplo-raster.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://r.geocompx.org/spatial-class">Geocomputation with R</a></p>
+</div>
+</section><section id="dados-matriciais-ou-raster-1" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
 
-<img data-src="img/raster-tipo-dado.png" class="r-stretch quarto-figure-center"></section><section id="dados-matriciais-ou-raster-2" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
+<img data-src="img/raster-tipo-dado.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://r.geocompx.org/spatial-class">Geocomputation with R</a></p>
+</div>
+</section><section id="dados-matriciais-ou-raster-2" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
 
-<img data-src="img/raster-camadas.png" class="r-stretch quarto-figure-center"></section><section id="dados-matriciais-ou-raster-3" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
+<img data-src="img/raster-camadas.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://www.neonscience.org/resources/learning-hub/tutorials/dc-multiband-rasters-r">Imagem 1</a> e <a href="https://edzer.github.io/UseR2019/part1.html">Imagem 2</a>.</p>
+</div>
+</section><section id="dados-matriciais-ou-raster-3" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
 <ul>
 <li>
 <p>Exemplos:</p>
@@ -420,57 +433,131 @@ Lais Brasileiro + Beatriz Milz
 </section><section id="section" class="slide level2"><h2></h2>
 
 <img data-src="img/CRS.png" class="r-stretch quarto-figure-center"><p>Ponto azul representa a origem do CRS e ponto vermelho a coordenada de localização de Londres.</p>
+<div class="footer">
+<p>Fonte: <a href="https://r.geocompx.org/spatial-class">Geocomputation with R</a></p>
+</div>
 </section><section id="projeções" class="slide level2"><h2>Projeções</h2>
 <p>Para a definição de um sistema de coordenadas geográficas é necessário escolher uma forma de representar a superfície da Terra:</p>
 
-<img data-src="img/datum.png" class="r-stretch quarto-figure-center"></section><section id="projeções-1" class="slide level2"><h2>Projeções</h2>
+<img data-src="img/datum.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: ??</p>
+</div>
+</section><section id="projeções-1" class="slide level2"><h2>Projeções</h2>
 <ul>
 <li><p>Mapas dependem de uma <strong>projeção</strong> que se refere a tradução da superfície tridimensional da terra em um plano cartesiano.</p></li>
 <li><p>Projeções possuem ponto de origem, valores de XY e uma unidade linear de medida.</p></li>
 <li><p><a href="https://www.jasondavies.com/maps/transition/">Projeções sempre geram distorções</a>.</p></li>
 </ul>
-<p>Fonte: https://gisgeography.com/map-projections/</p>
+<div class="footer">
+<p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
+</div>
 </section><section id="exemplo-projeção-cilíndrica" class="slide level2"><h2>Exemplo: Projeção cilíndrica</h2>
 
-<img data-src="img/projecao-cilindrica.png" class="r-stretch quarto-figure-center"><p>Fonte: https://gisgeography.com/map-projections/</p>
+<img data-src="img/projecao-cilindrica.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
+</div>
 </section><section id="exemplo-projeção-cônica" class="slide level2"><h2>Exemplo: Projeção cônica</h2>
 
-<img data-src="img/projecao-conica.png" class="r-stretch quarto-figure-center"><p>Fonte: https://gisgeography.com/map-projections/</p>
+<img data-src="img/projecao-conica.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
+</div>
 </section><section id="exemplo-projeção-plana" class="slide level2"><h2>Exemplo: Projeção plana</h2>
 
-<img data-src="img/projecao-plana.png" class="r-stretch quarto-figure-center"><p>Fonte: https://gisgeography.com/map-projections/</p>
+<img data-src="img/projecao-plana.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
+</div>
 </section></section><section><section id="ciclo-de-ciência-de-dados" class="title-slide slide level1 center"><h1>Ciclo de ciência de dados</h1>
 
 </section><section id="ciclo-de-ciência-de-dados-1" class="slide level2"><h2>Ciclo de ciência de dados</h2>
 
-<img data-src="img/ciclo-ciencia-de-dados.png" class="r-stretch quarto-figure-center"></section><section id="ciclo-de-análise-de-dados-espaciais" class="slide level2"><h2>Ciclo de análise de dados espaciais</h2>
+<img data-src="img/ciclo-ciencia-de-dados.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://livro.curso-r.com/">Curso-R</a>, adaptado de <a href="https://r4ds.hadley.nz/">R for Data Science</a></p>
+</div>
+</section><section id="ciclo-de-análise-de-dados-espaciais" class="slide level2"><h2>Ciclo de análise de dados espaciais</h2>
 <ul>
-<li>É similar ao ciclo de ciência de dados!</li>
-</ul></section><section id="principais-pacotes" class="slide level2"><h2>Principais pacotes</h2>
+<li>As etapas são similares ao ciclo de ciência de dados!</li>
+</ul></section></section><section><section id="principais-pacotes" class="title-slide slide level1 center"><h1>Principais pacotes</h1>
+
+</section><section id="sf-simple-features-for-r" class="slide level2"><h2><a href="https://r-spatial.github.io/sf/">sf (Simple Features for R)</a></h2>
 <ul>
-<li><p><strong>sf:</strong> Pacote para manipulação de dados espaciais vetoriais.</p></li>
-<li><p><strong>terra</strong>: Pacote para manipulação de dados espaciais vetoriais e matriciais.</p></li>
-</ul></section><section id="pacotes-importantes-para-importação-de-dados" class="slide level2"><h2>Pacotes importantes para importação de dados</h2>
+<li>Pacote para manipulação de dados espaciais vetoriais.</li>
+</ul>
+
+<img data-src="img/sf_horst.png" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte da imagem: <a href="https://github.com/allisonhorst/stats-illustrations" class="uri">https://github.com/allisonhorst/stats-illustrations</a></p>
+</div>
+</section><section class="slide level2">
+<img data-src="img/sf_page-0001.jpg" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://github.com/rstudio/cheatsheets/blob/main/sf.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/sf.pdf</a></p>
+</div>
+</section><section class="slide level2">
+<img data-src="img/sf_page-0002.jpg" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://github.com/rstudio/cheatsheets/blob/main/sf.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/sf.pdf</a></p>
+</div>
+</section><section id="terra" class="slide level2"><h2><a href="https://rspatial.github.io/terra/index.html">terra</a></h2>
 <ul>
-<li><p><strong>geobr</strong>: Pacote para download de dados espaciais do Brasil. Ex. <code><a href="https://rdrr.io/pkg/geobr/man/read_state.html">geobr::read_state()</a></code>, <code><a href="https://rdrr.io/pkg/geobr/man/read_municipality.html">geobr::read_municipality()</a></code>, etc.</p></li>
-<li><p><strong><a href="https://jakob.schwalb-willmann.de/getSpatialData/">getSpatialData</a></strong> - Pacote para fazer download de imagens de satélite.</p></li>
-</ul></section><section id="pacotes-úteis-para-transformação-de-dados" class="slide level2"><h2>Pacotes úteis para transformação de dados</h2>
+<li>Pacote para manipulação e modelagem de dados espaciais vetoriais e matriciais.</li>
+</ul>
+
+<img data-src="https://rspatial.github.io/terra/logo.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="getspatialdata" class="slide level2"><h2><a href="https://jakob.schwalb-willmann.de/getSpatialData/">getSpatialData</a></h2>
+<ul>
+<li>Pacote para fazer download de imagens de satélite.</li>
+</ul>
+
+<img data-src="https://user-images.githubusercontent.com/23257860/84061405-2651d900-a9be-11ea-8038-075efe9a3f36.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="geobr" class="slide level2"><h2><a href="https://ipeagit.github.io/geobr/">geobr</a></h2>
+<ul>
+<li><p>O pacote <strong>geobr</strong> disponibiliza funções para obter diversas bases de dados <strong>espaciais</strong> oficiais do Brasil.</p></li>
+<li><p>O pacote foi desenvolvido e é mantido pela equipe do <a href="https://www.ipea.gov.br/portal/">IPEA - Instituto de Pesquisa Econômica Aplicada</a>.</p></li>
+<li><p>Você pode saber mais no repositório do pacote no GitHub: <a href="https://ipeagit.github.io/geobr/" class="uri">https://ipeagit.github.io/geobr/</a></p></li>
+</ul>
+
+<img data-src="https://github.com/ipeaGIT/geobr/blob/master/r-package/man/figures/geobr_logo_b.png?raw=true" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="geobr---funções-importantes" class="slide level2"><h2>
+<a href="https://ipeagit.github.io/geobr/">geobr</a> - Funções importantes</h2>
+<ul>
+<li><p><code>read_country()</code>: Delimitação do Brasil</p></li>
+<li><p><code>read_state()</code>: Delimitação dos estados do Brasil</p></li>
+<li><p><code>read_state("SP")</code>: Delimitação de um estado específico, usando a sigla como argumento</p></li>
+<li><p><code>read_municipality()</code>: Delimitação de todos os municípios do Brasil. É uma base pesada!</p></li>
+<li><p><code>read_municipality(code_muni = 3550308)</code>: Delimitação de um município específico, usando o código do IBGE do município.</p></li>
+</ul></section><section id="geobr---consultando-todas-as-funções-disponíveis" class="slide level2"><h2>
+<a href="https://ipeagit.github.io/geobr/">geobr</a> - Consultando todas as funções disponíveis</h2>
+<ul>
+<li>Função <code>list_geobr()</code>
+</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d1c2bd0aa8d60550b58a" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d1c2bd0aa8d60550b58a">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"function":["`read_country`","`read_region`","`read_state`","`read_meso_region`","`read_micro_region`","`read_intermediate_region`","`read_immediate_region`","`read_municipality`","`read_municipal_seat`","`read_weighting_area`","`read_census_tract`","`read_statistical_grid`","`read_metro_area`","`read_urban_area`","`read_amazon`","`read_biomes`","`read_conservation_units`","`read_disaster_risk_area`","`read_indigenous_land`","`read_semiarid`","`read_health_facilities`","`read_health_region`","`read_neighborhood`","`read_schools`","`read_comparable_areas`","`read_urban_concentrations`","`read_pop_arrangements`"],"geography":["Country","Region","States","Meso region","Micro region","Intermediate region","Immediate region","Municipality","Municipality seats (sedes municipais)","Census weighting area (área de ponderação)","Census tract (setor censitário)","Statistical Grid of 200 x 200 meters","Metropolitan areas","Urban footprints","Brazil's Legal Amazon","Biomes","Environmental Conservation Units","Disaster risk areas","Indigenous lands","Semi Arid region","Health facilities","Health regions and macro regions","Neighborhood limits","Schools","Historically comparable municipalities, aka Areas minimas comparaveis (AMCs)","Urban concentration areas (concentrações urbanas)","Population arrangements (arranjos populacioanis)"],"source":["IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","MMA","IBGE","MMA","CEMADEN and IBGE","FUNAI","IBGE","CNES, DataSUS","DataSUS","IBGE","INEP","IBGE","IBGE","IBGE"]},"columns":[{"id":"function","name":"function","type":"character"},{"id":"geography","name":"geography","type":"character"},{"id":"source","name":"source","type":"character"}],"defaultPageSize":5,"className":"smaller","dataKey":"b125dea94351ad9a9e2bfbcbd78e3c47"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section><section id="pacotes-do-tidyverse" class="slide level2"><h2>Pacotes do <a href="https://tidyverse.org">tidyverse</a>
+</h2>
 <ul>
 <li><p><strong>dplyr</strong>: Pacote para manipulação de dados.</p></li>
 <li><p><strong>tidyr</strong>: Pacote para organização de dados.</p></li>
-</ul></section><section id="principais-pacotes-visualizar" class="slide level2"><h2>Principais pacotes: Visualizar</h2>
-<ul>
 <li><p><strong>ggplot2</strong>: Pacote para visualização de dados. Possui funções para visualização de dados espaciais vetoriais (<code><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">ggplot2::geom_sf()</a></code>).</p></li>
-<li><p><strong>tmap</strong>: Pacote para visualização de dados espaciais vetoriais e matriciais. Possui funções para visualização de dados espaciais vetoriais (<code><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html">tmap::tm_shape()</a></code>, <code><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html">tmap::tm_fill()</a></code>, etc.) e matriciais (<code><a href="https://r-tmap.github.io/tmap/reference/tm_raster.html">tmap::tm_rgb()</a></code>).</p></li>
-<li><p><strong>leaflet</strong>: Pacote para visualização de dados espaciais vetoriais e matriciais. Possui funções para visualização de dados espaciais vetoriais (<code><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">leaflet::addPolygons()</a></code>, <code><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">leaflet::addCircles()</a></code>, etc.) e matriciais (<code><a href="https://rdrr.io/pkg/leaflet/man/addRasterImage.html">leaflet::addRasterImage()</a></code>).</p></li>
-</ul></section><section id="principais-pacotes-modelar" class="slide level2"><h2>Principais pacotes: Modelar</h2>
+</ul>
+
+<img data-src="https://tidyverse.tidyverse.org/logo.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="tmap---thematic-maps-in-r" class="slide level2"><h2><a href="https://r-tmap.github.io/tmap/">tmap - thematic maps in R</a></h2>
 <ul>
-<li>
-<strong>terra</strong>. Ex. <code><a href="https://rdrr.io/pkg/terra/man/predict.html">terra::predict()</a></code>.s</li>
-</ul></section></section><section id="vamos-para-um-exemplo-prático" class="title-slide slide level1 center"><h1>Vamos para um exemplo prático!</h1>
+<li>Pacote para visualização de dados espaciais vetoriais e matriciais.</li>
+</ul>
+
+<img data-src="https://r-tmap.github.io/tmap/articles/tmap_vv_files/figure-html/unnamed-chunk-6-1.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="leaflet" class="slide level2"><h2><a href="https://rstudio.github.io/leaflet/">leaflet</a></h2>
+<ul>
+<li>Pacote para visualização interativas de dados espaciais vetoriais e matriciais.</li>
+</ul>
+
+<img data-src="img/leaflet.png" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="footer">
+<p><a href="https://beatrizmilz.github.io/2023-04-cervejacomdados-fortaleza/#/usando-os-dados-importados">Imagem é a captura de tela deste slide</a></p>
+</div>
+</section></section><section id="vamos-para-um-exemplo-prático" class="title-slide slide level1 center"><h1>Vamos para um exemplo prático!</h1>
 
 </section><section id="links-úteis-para-aprender-mais" class="title-slide slide level1 center"><h1>Links úteis para aprender mais</h1>
 <ul>
+<li><p><a href="https://r.geocompx.org/spatial-class">Geocomputation with R - Foundations - Geographic data in R</a></p></li>
 <li><p><a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a></p></li>
 <li><p><a href="https://link.springer.com/article/10.1007/s40823-021-00067-y">Artigo: Open-source tools in R for Landscape Ecology</a></p></li>
 <li><p><a href="https://analises-ecologicas.com/cap15">Livro Análises Ecológicas no R - Capítulo 15: Dados geoespaciais</a></p></li>
