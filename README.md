@@ -13,7 +13,8 @@
 ## Palestrantes
 
 -   **Laís Brasileiro**
-      - Email: [laisbioufc@gmail.com](mailto:laisbioufc@gmail.com)  
+
+    -   Email: [laisbioufc\@gmail.com](mailto:laisbioufc@gmail.com)
 
 -   **Beatriz Milz**
 
@@ -22,8 +23,12 @@
 
 ## Materiais
 
-- [Slide: R-Ladies São Paulo](https://r-ladies-sao-paulo.github.io/2023-12-dados-espaciais/slides/slide-rladies-sp.html)
+-   [Slide: R-Ladies São Paulo](https://r-ladies-sao-paulo.github.io/2023-12-dados-espaciais/slides/slide-rladies-sp.html)
 
-- [Slide: Trabalhando com dados espaciais no R](https://r-ladies-sao-paulo.github.io/2023-12-dados-espaciais/slides/)
+-   [Slide: Trabalhando com dados espaciais no R](https://r-ladies-sao-paulo.github.io/2023-12-dados-espaciais/slides/)
 
-- Código da prática - EM BREVE
+-   [Código da prática - Parte 1](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/pratica-parte-1.R)
+
+-   [Código da prática - Parte 2](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/pratica-parte-2.R)
+
+

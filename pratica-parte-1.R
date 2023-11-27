@@ -36,10 +36,30 @@ sigbm <- sigbm_bruto |>
     )
   ) |> 
   # Removendo linhas onde lat/long é igual à 0 (erro de cadastro)
-  dplyr::filter(lat != 0, long != 0)
+  dplyr::filter(lat != 0, long != 0) |> 
+  sf::st_as_sf(coords = c("long", "lat"))
 
+# Verificando a classe
+class(sigbm)
 
-# Visualização interativa
+# Visualização estática -------------------------
+
+library(ggplot2)
+
+sigbm |> 
+  ggplot() +
+  geom_sf()
+
+# Vamos para a visualização interativa, e depois voltamos 
+
+# Visualização interativa ------------------------
+
+# Quando é bom?
+# Comunicação com o público: dashboards, apresentações
+# Para explorar os dados!
+
+# Não é bom: trabalhos científicos, artigos, relatórios - precisa ser estático
+
 
 # Vamos fazer uma primeira visualização?
 library(leaflet)
@@ -107,5 +127,5 @@ sigbm |>
 # pacote leaflet para visualização interativa
 # pacote geobr para baixar dados vetoriais do Brasil
 # ainda precisamos trabalhar com dados raster/matriciais
-# e também criar uma visualização estática!
+# e também criar uma visualização estática mais bonita!
 # Vamos para a parte 2 da prática :)
