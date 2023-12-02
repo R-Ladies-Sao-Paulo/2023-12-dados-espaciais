@@ -47,6 +47,7 @@ class(sigbm)
 
 # EDITAR: 
 # Mostrar o que o sf adiciona na base, como o CRS.
+# mostrar que dá pra acessar esses metadados com funções.
 
 # Visualização estática -------------------------
 
