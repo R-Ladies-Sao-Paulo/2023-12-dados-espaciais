@@ -161,6 +161,16 @@ mean(elevation_rejeitos$file6fac32353291)
 
 # AQUI EU VOU FAZER UMA ROTINA COM O RGEE PARA BAIXAR AS IMAGENS AI PENSEI
 # QUE PODERÍAMOS TERMINAR COM UMA FIGURA 'PUBLICATION READY', O QUE ACHA?
+install.packages("rgee")
+library(rgee)
+ee_install(py_env = "rgee")
+ee_check()
+reticulate::py_available()
+ee_Initialize(drive = TRUE)
+rgee::ee_check_credentials()
 
+# Imagens landsat (fonte: https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2)
+imagens <- ee$ImageCollection('LANDSAT/LC08/C02/T1_L2')$filterDate('2019-01-23', '2019-02-29')
+ee_print(dataset)
 
 # fim ------------------------------
