@@ -45,6 +45,9 @@ sigbm <- sigbm_bruto |>
 # Verificando a classe
 class(sigbm)
 
+# EDITAR: 
+# Mostrar o que o sf adiciona na base, como o CRS.
+
 # Visualização estática -------------------------
 
 library(ggplot2)
