@@ -1,0 +1,39 @@
+Descricao;Classe;Cor
+Floresta;1;#32a65e
+Formação Florestal;3;#1f8d49
+Formação Savânica;4;#7dc975
+Mangue;5;#04381d
+Floresta Alagável (beta);6;#026975
+Restinga Arbórea;49;#02d659
+Formação Natural não Florestal;10;#ad975a
+Campo Alagado e Área Pantanosa;11;#519799
+Formação Campestre;12;#d6bc74
+Apicum;32;#fc8114
+Afloramento Rochoso;29;#ffaa5f
+Restinga Herbácea;50;#ad5100
+Outras Formações não Florestais;13;#d89f5c
+Agropecuária;14;#FFFFB2
+Pastagem;15;#edde8e
+Agricultura;18;#E974ED
+Lavoura Temporária;19;#C27BA0
+ Soja;39;#f5b3c8
+Cana;20;#db7093
+Arroz;40;#c71585
+Algodão (beta);62;#ff69b4
+Outras Lavouras Temporárias;41;#f54ca9
+Lavoura Perene;36;#d082de
+Café;46;#d68fe2
+Citrus;47;#9932cc
+Dendê (beta);35;#9065d0
+Outras Lavouras Perenes;48;#e6ccff
+Silvicultura;9;#7a5900
+Mosaico de Usos;21;#ffefc3
+Área não Vegetada;22;#d4271e
+Praia, Duna e Areal;23;#ffa07a
+Área Urbanizada;24;#d4271e
+Mineração;30;#9c0027
+Outras Áreas não Vegetadas;25;#db4d4f
+Corpo D'água;26;#0000FF
+Rio, Lago e Oceano;33;#2532e4
+Aquicultura;31;#091077
+Não observado;27;#ffffff

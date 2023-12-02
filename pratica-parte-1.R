@@ -9,8 +9,11 @@ link_sigbm <-
 
 # Fazendo uma requisição POST neste link, 
 # e salvando o arquivo localmente
+
+########################################################
 httr::POST(link_sigbm,
-           httr::write_disk("sigbm.xlsx"))
+           httr::write_disk("sigbm.xlsx", overwrite = TRUE))
+########################################################
 
 # Importação dos dados ------------
 
@@ -35,7 +38,7 @@ sigbm <- sigbm_bruto |>
       Empreendedor: {nome_do_empreendedor}"
     )
   ) |> 
-  # Removendo linhas onde lat/long é igual à 0 (erro de cadastro)
+  # Removendo linhas onde lat/long é igual a 0 (erro de cadastro)
   dplyr::filter(lat != 0, long != 0) |> 
   sf::st_as_sf(coords = c("long", "lat"))
 
@@ -67,30 +70,36 @@ library(leaflet)
 # Vamos criar o mapa de forma incremental!
 
 # Versão 1: mapa vazio
+
 sigbm |> 
   # Começa um mapa vazio
   leaflet() 
 
 # Versão 2: vamos adicionar as barragens
 
+########################################################
+sigbm <- sigbm |>
+  dplyr::mutate(X = sf::st_coordinates(sigbm)[,1],
+                Y = sf::st_coordinates(sigbm)[,2])
+########################################################
 sigbm |> 
   leaflet() |> 
   # Adiciona as barragens
-  addMarkers(~ long, ~lat)
+  addMarkers(~X, ~Y)
 
 # Versão 3: vamos adicionar um fundo de mapa
 
 sigbm |> 
   leaflet() |> 
   addProviderTiles("Esri.WorldImagery") |> 
-  addMarkers(~ long, ~lat)
+  addMarkers(~X, ~Y)
 
 # Versão 4: vamos agrupar os pontos
 
 sigbm |> 
   leaflet() |> 
   addProviderTiles("Esri.WorldImagery") |> 
-  addMarkers(~ long, ~lat,
+  addMarkers(~X, ~Y,
              clusterOptions = markerClusterOptions())
 
 # Versão 5: vamos adicionar um popup
@@ -98,7 +107,7 @@ sigbm |>
 sigbm |> 
   leaflet() |> 
   addProviderTiles("Esri.WorldImagery") |> 
-  addMarkers(~ long, ~lat,
+  addMarkers(~X, ~Y,
              clusterOptions = markerClusterOptions(),
              popup = ~texto)
 
@@ -116,8 +125,8 @@ sigbm |>
   addProviderTiles("Esri.WorldImagery") |>
   # Adicionando os estados
   addPolygons(data = estados, label = ~abbrev_state, fillOpacity = 0) |>
-  addMarkers( ~ long,
-              ~ lat,
+  addMarkers( ~X,
+              ~Y,
               clusterOptions = markerClusterOptions(),
               popup = ~ texto)
 
