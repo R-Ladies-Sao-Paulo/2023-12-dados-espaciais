@@ -3,3 +3,9 @@
 .RData
 .Ruserdata
 brasil_coverage_2022.tif
+limites.dbf
+limites.prj
+limites.shp
+limites.shx
+Antes.tif
+Depois.tif
