@@ -31,4 +31,16 @@
 
 -   [Código da prática - Parte 2](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/pratica-parte-2.R)
 
+## Pacotes necessários
+
+``` r
+pacotes_necessarios <- c("httr",  "readxl", "janitor", "dplyr", "parzer", "glue",
+"sf", "ggplot2", "leaflet", "geobr", "terra", "mapivew")
+
+install.packages("pacotes_necessarios")
+```
+
+## Arquivos necessários
+
+
 
