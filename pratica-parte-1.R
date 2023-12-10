@@ -1,5 +1,6 @@
 # Obteção dos dados ---------
 # Download dos dados de barragens de mineração no Brasil
+# https://app.anm.gov.br/SIGBM/Publico/ClassificacaoNacionalDaBarragem
 
 # Conseguimos “imitar” o processo de baixar o arquivo usando programação.
 
@@ -9,16 +10,13 @@ link_sigbm <-
 
 # Fazendo uma requisição POST neste link, 
 # e salvando o arquivo localmente
-
-########################################################
 httr::POST(link_sigbm,
-           httr::write_disk("sigbm.xlsx", overwrite = TRUE))
-########################################################
+           httr::write_disk("dados/sigbm.xlsx", overwrite = TRUE))
 
 # Importação dos dados ------------
 
 # Importar dados, pulando 4 linhas iniciais
-sigbm_bruto <- readxl::read_excel("sigbm.xlsx", skip = 4)
+sigbm_bruto <- readxl::read_excel("dados/sigbm.xlsx", skip = 4)
 
 # Ver quais colunas a base apresenta
 dplyr::glimpse(sigbm_bruto)
@@ -40,14 +38,24 @@ sigbm <- sigbm_bruto |>
   ) |> 
   # Removendo linhas onde lat/long é igual a 0 (erro de cadastro)
   dplyr::filter(lat != 0, long != 0) |> 
-  sf::st_as_sf(coords = c("long", "lat"))
+  sf::st_as_sf(coords = c("long", "lat"), crs = 4326, remove = FALSE)
+
+# Site útil para consultar o CRS 
+# https://epsg.io/
 
 # Verificando a classe
 class(sigbm)
 
-# EDITAR: 
-# Mostrar o que o sf adiciona na base, como o CRS.
-# mostrar que dá pra acessar esses metadados com funções.
+# Novas informações:
+head(sigbm)
+# Geometry type
+# Dimension
+# Bounding box
+# CRS
+
+# Verificando o CRS
+sf::st_crs(sigbm)
+
 
 # Visualização estática -------------------------
 
@@ -80,39 +88,30 @@ sigbm |>
   leaflet() 
 
 # Versão 2: vamos adicionar as barragens
-
-########################################################
-sigbm <- sigbm |>
-  dplyr::mutate(X = sf::st_coordinates(sigbm)[,1],
-                Y = sf::st_coordinates(sigbm)[,2])
-########################################################
 sigbm |> 
   leaflet() |> 
   # Adiciona as barragens
-  addMarkers(~X, ~Y)
+  addMarkers()
 
 # Versão 3: vamos adicionar um fundo de mapa
-
 sigbm |> 
   leaflet() |> 
   addProviderTiles("Esri.WorldImagery") |> 
-  addMarkers(~X, ~Y)
+  addMarkers()
 
 # Versão 4: vamos agrupar os pontos
 
 sigbm |> 
   leaflet() |> 
   addProviderTiles("Esri.WorldImagery") |> 
-  addMarkers(~X, ~Y,
-             clusterOptions = markerClusterOptions())
+  addMarkers(clusterOptions = markerClusterOptions())
 
 # Versão 5: vamos adicionar um popup
 
 sigbm |> 
   leaflet() |> 
   addProviderTiles("Esri.WorldImagery") |> 
-  addMarkers(~X, ~Y,
-             clusterOptions = markerClusterOptions(),
+  addMarkers(clusterOptions = markerClusterOptions(),
              popup = ~texto)
 
 # Vamos adicionar a delimitação dos estados brasileiros?
@@ -129,11 +128,12 @@ sigbm |>
   addProviderTiles("Esri.WorldImagery") |>
   # Adicionando os estados
   addPolygons(data = estados, label = ~abbrev_state, fillOpacity = 0) |>
-  addMarkers( ~X,
-              ~Y,
-              clusterOptions = markerClusterOptions(),
+  addMarkers(clusterOptions = markerClusterOptions(),
               popup = ~ texto)
 
+
+# Vamos exportar a base do sigbm já tratada
+readr::write_rds(sigbm, "dados-output/sigbm.rds")
 
 # Até agora usamos:
 # pacote parzer para limpar lat/long
