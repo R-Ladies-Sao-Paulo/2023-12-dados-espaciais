@@ -164,6 +164,8 @@ plot(sigbm_brumadinho$geometry,
   xlab = "long", ylab = "lat", add = T
 )
 
+readr::write_rds(uso_da_terra_classificado, "dados-output/uso_da_terra_classificado.rds")
+
 # Vamos observar a área atingida pelo rompimento da Barragem 1 da Mina do Feijão
 # fonte: IBGE (https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/23808-novos-dados-geoespaciais-mostram-area-atingida-pelo-rompimento-da-barragem)
 dir("dados/Municipios_localidades_Afetados_MG/", pattern = ".shp")
@@ -182,7 +184,7 @@ barragem_vi <- sigbm_brumadinho |>
 mapview(sigbm_brumadinho, color = "hotpink", col.regions = "hotpink") +
   mapview(barragem_vi,
     color = "red", col.regions = "red",
-    popup = leafpop::popupTable(barragem, # popup é uma função do pacote {leafpop}
+    popup = leafpop::popupTable(barragem_vi, # popup é uma função do pacote {leafpop}
       zcol = c("texto")
     )
   ) + # aprenda mais em: https://r-spatial.github.io/mapview/articles/mapview_04-popups.html#image-popups
@@ -190,3 +192,4 @@ mapview(sigbm_brumadinho, color = "hotpink", col.regions = "hotpink") +
     color = "coral",
     popup = leafpop::popupImage(img, src = "remote")
   )
+
