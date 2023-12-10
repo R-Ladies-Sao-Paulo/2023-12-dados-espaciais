@@ -63,6 +63,6 @@ if (!file.exists("dados/brasil_coverage_2022.tif")) {
 
 -   [Slide: Trabalhando com dados espaciais no R](https://r-ladies-sao-paulo.github.io/2023-12-dados-espaciais/slides/)
 
--   [Código da prática - Parte 1](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/pratica-parte-1.R)
+-   [Código da prática - Parte 1](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/praticas/pratica-parte-1.R)
 
--   [Código da prática - Parte 2](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/pratica-parte-2.R)
+-   [Código da prática - Parte 2](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/praticas/pratica-parte-2.R)
