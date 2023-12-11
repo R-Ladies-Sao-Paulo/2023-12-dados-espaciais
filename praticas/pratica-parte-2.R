@@ -118,7 +118,7 @@ classes_de_interesse
 classes_de_interesse$Classe
 
 
-# Dúvida bea: O que essa matriz faz?
+# Valores para matriz de reclassificação
 r <- c(
   3, 3, 3,
   4, 4, 4,
@@ -132,8 +132,6 @@ r <- c(
 )
 matriz <- matrix(r, byrow = T, ncol = 3)
 matriz
-
-
 
 uso_da_terra_classificado <- terra::classify(uso_da_terra, matriz, include.lowest = T, right = F)
 
