@@ -9,7 +9,7 @@
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.521">
+<meta name="generator" content="quarto-1.3.450">
 <meta name="author" content="Lais Brasileiro + Beatriz Milz">
 <meta name="dcterms.date" content="2023-12-12">
 <title>Trabalhando com dados espaciais no R</title>
@@ -157,8 +157,7 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -321,7 +320,7 @@
       margin-right: 0; 
     }
   </style>
-<script src="index_files/libs/core-js-2.5.3/shim.min.js"></script><script src="index_files/libs/react-18.2.0/react.min.js"></script><script src="index_files/libs/react-18.2.0/react-dom.min.js"></script><script src="index_files/libs/reactwidget-1.0.0/react-tools.js"></script><script src="index_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="index_files/libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="index_files/libs/core-js-2.5.3/shim.min.js"></script><script src="index_files/libs/react-17.0.0/react.min.js"></script><script src="index_files/libs/react-17.0.0/react-dom.min.js"></script><script src="index_files/libs/reactwidget-1.0.0/react-tools.js"></script><script src="index_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="index_files/libs/reactable-0.4.4/reactable.css" rel="stylesheet">
 <script src="index_files/libs/reactable-binding-0.4.4/reactable.js"></script>
 </head>
 <body class="quarto-light">
@@ -343,9 +342,8 @@ Lais Brasileiro + Beatriz Milz
 
 </section><section id="lais-brasileiro" class="slide level2"><h2>Lais Brasileiro</h2>
 <ul>
-<li><p>Me chamo Lais Brasileiro, sou bióloga, cearense e doutoranda em Ecologia pela Universidade de Brasília (UnB). Sempre trabalhei com conservação em suas diversas faces. Atualmente meu trabalho envolve planejamento sistemático para a conservação.</p></li>
-<li><p>R faz parte do meu cotidiano de pesquisa e participo da coorganização do R-ladies Brasília;</p></li>
-<li><p>Tenho como ídolos na minha vida Patti Smith e Marina Silva. E na esfera fictícia, Buffy (sim, a caça vampiros).</p></li>
+<li><p>Me chamo Lais Brasileiro, sou bióloga, cearense e doutoranda em Ecologia pela Universidade de Brasília (UnB). Sempre trabalhei com conservação em suas diversas faces. Atualmente meu trabalho envolve planejamento sistemático para a conservação com foco em diversidade funcional de Aves e conectividade ecológica.</p></li>
+<li><p>R faz parte do meu cotidiano de pesquisa, participei da coorganização do R-ladies Brasília e já ministrei alguns cursos sobre o uso de dados espaciais com R junto com o R-Ladies Goiânia.</p></li>
 </ul></section><section id="beatriz-milz" class="slide level2"><h2>Beatriz Milz</h2>
 <ul>
 <li><p>Doutoranda em Ciência Ambiental no IEE/USP</p></li>
@@ -366,13 +364,10 @@ Lais Brasileiro + Beatriz Milz
 <li><p>Um exemplo prático</p></li>
 <li><p>Links úteis para aprender mais</p></li>
 </ul></section><section id="conceitos-importantes" class="title-slide slide level1 center"><h1>Conceitos importantes</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://r.geocompx.org/"><img data-src="https://r.geocompx.org/images/cover.png" class="quarto-figure quarto-figure-center" style="width:40.0%" alt="Principal referência: Geocomputation with R"></a></p>
-<figcaption>Principal referência: Geocomputation with R</figcaption></figure>
-</div>
-</section><section><section id="modelos-de-dados-geográficos" class="title-slide slide level1 center"><h1>Modelos de dados geográficos</h1>
 
-<img data-src="img/vector-raster_1644589693.jpeg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="https://r.geocompx.org/images/cover.png" style="width:40.0%" class="r-stretch quarto-figure-center"><p class="caption">Principal referência: Geocomputation with R</p></section><section><section id="modelos-de-dados-geográficos" class="title-slide slide level1 center"><h1>Modelos de dados geográficos</h1>
+
+<img data-src="img/vector-raster_1644589693.jpeg" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte da imagem: <a href="https://guides.lib.uw.edu/" class="uri">https://guides.lib.uw.edu/</a></p>
 </div>
 </section><section id="dados-vetoriais" class="slide level2"><h2>Dados vetoriais</h2>
@@ -380,7 +375,7 @@ Lais Brasileiro + Beatriz Milz
 <li>Representação do mundo por pontos, linhas e polígonos.</li>
 </ul>
 
-<img data-src="img/exemplo-vetores.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/exemplo-vetores.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://r.geocompx.org/spatial-class">Geocomputation with R</a></p>
 </div>
 </section><section id="dados-vetoriais-1" class="slide level2"><h2>Dados vetoriais</h2>
@@ -396,20 +391,20 @@ Lais Brasileiro + Beatriz Milz
 </ul></section><section id="dados-matriciais-ou-raster" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
 <ul>
 <li><p>Representação do mundo em uma grade contínua de células de tamanho constante (regular grids)</p></li>
-<li><p>Informação agregada espacialmente em uma dada resolução (consistente e escalonável)</p></li>
+<li><p>Informação agregada espacialmente em uma dada resolução (escalonável)</p></li>
 </ul>
 
-<img data-src="img/exemplo-raster.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/exemplo-raster.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://r.geocompx.org/spatial-class">Geocomputation with R</a></p>
 </div>
 </section><section id="dados-matriciais-ou-raster-1" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
 
-<img data-src="img/raster-tipo-dado.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/raster-tipo-dado.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://r.geocompx.org/spatial-class">Geocomputation with R</a></p>
 </div>
 </section><section id="dados-matriciais-ou-raster-2" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
 
-<img data-src="img/raster-camadas.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/raster-camadas.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://www.neonscience.org/resources/learning-hub/tutorials/dc-multiband-rasters-r">Imagem 1</a> e <a href="https://edzer.github.io/UseR2019/part1.html">Imagem 2</a>.</p>
 </div>
 </section><section id="dados-matriciais-ou-raster-3" class="slide level2"><h2>Dados matriciais (ou raster)</h2>
@@ -436,14 +431,14 @@ Lais Brasileiro + Beatriz Milz
 <p><strong>Importante:</strong> As posições de Long e Lat são medidas em distância angular (graus).</p>
 </section><section id="section" class="slide level2"><h2></h2>
 
-<img data-src="img/CRS.png" class="quarto-figure quarto-figure-center r-stretch"><p>Ponto azul representa a origem do CRS e ponto vermelho a coordenada de localização de Londres.</p>
+<img data-src="img/CRS.png" class="r-stretch quarto-figure-center"><p>Ponto azul representa a origem do CRS e ponto vermelho a coordenada de localização de Londres.</p>
 <div class="footer">
 <p>Fonte: <a href="https://r.geocompx.org/spatial-class">Geocomputation with R</a></p>
 </div>
 </section><section id="projeções" class="slide level2"><h2>Projeções</h2>
 <p>Para a definição de um sistema de coordenadas geográficas é necessário escolher uma forma de representar a superfície da Terra:</p>
 
-<img data-src="img/datum.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/datum.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: ??</p>
 </div>
 </section><section id="projeções-1" class="slide level2"><h2>Projeções</h2>
@@ -457,48 +452,50 @@ Lais Brasileiro + Beatriz Milz
 </div>
 </section><section id="exemplo-projeção-cilíndrica" class="slide level2"><h2>Exemplo: Projeção cilíndrica</h2>
 
-<img data-src="img/projecao-cilindrica.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/projecao-cilindrica.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
 </div>
 </section><section id="exemplo-projeção-cônica" class="slide level2"><h2>Exemplo: Projeção cônica</h2>
 
-<img data-src="img/projecao-conica.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/projecao-conica.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
 </div>
 </section><section id="exemplo-projeção-plana" class="slide level2"><h2>Exemplo: Projeção plana</h2>
 
-<img data-src="img/projecao-plana.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/projecao-plana.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
 </div>
 </section></section><section><section id="ciclo-de-ciência-de-dados" class="title-slide slide level1 center"><h1>Ciclo de ciência de dados</h1>
 
 </section><section id="ciclo-de-ciência-de-dados-1" class="slide level2"><h2>Ciclo de ciência de dados</h2>
 
-<img data-src="img/ciclo-ciencia-de-dados.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="img/ciclo-ciencia-de-dados.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://livro.curso-r.com/">Curso-R</a>, adaptado de <a href="https://r4ds.hadley.nz/">R for Data Science</a></p>
 </div>
 </section><section id="ciclo-de-análise-de-dados-espaciais" class="slide level2"><h2>Ciclo de análise de dados espaciais</h2>
 <ul>
 <li>As etapas são similares ao ciclo de ciência de dados!</li>
-</ul></section></section><section><section id="principais-pacotes" class="title-slide slide level1 center"><h1>Principais pacotes</h1>
+</ul>
+
+<img data-src="img/ciclo_dados_espaciais.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://link.springer.com/article/10.1007/s40823-021-00067-y">Open-source Tools in R for Landscape Ecology</a>, Hasselbarth et al.&nbsp;(2021)</p>
+</div>
+</section></section><section><section id="principais-pacotes" class="title-slide slide level1 center"><h1>Principais pacotes</h1>
 
 </section><section id="sf-simple-features-for-r" class="slide level2"><h2><a href="https://r-spatial.github.io/sf/">sf (Simple Features for R)</a></h2>
 <ul>
 <li>Pacote para manipulação de dados espaciais vetoriais.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://github.com/allisonhorst/stats-illustrations"><img data-src="img/sf_horst.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></a></p>
-</figure>
-</div>
-<div class="footer">
+
+<img data-src="img/sf_horst.png" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte da imagem: <a href="https://github.com/allisonhorst/stats-illustrations" class="uri">https://github.com/allisonhorst/stats-illustrations</a></p>
 </div>
 </section><section class="slide level2">
-<img data-src="img/sf_page-0001.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><div class="footer">
+<img data-src="img/sf_page-0001.jpg" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://github.com/rstudio/cheatsheets/blob/main/sf.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/sf.pdf</a></p>
 </div>
 </section><section class="slide level2">
-<img data-src="img/sf_page-0002.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><div class="footer">
+<img data-src="img/sf_page-0002.jpg" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://github.com/rstudio/cheatsheets/blob/main/sf.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/main/sf.pdf</a></p>
 </div>
 </section><section id="terra" class="slide level2"><h2><a href="https://rspatial.github.io/terra/index.html">terra</a></h2>
@@ -506,24 +503,24 @@ Lais Brasileiro + Beatriz Milz
 <li>Pacote para manipulação e modelagem de dados espaciais vetoriais e matriciais.</li>
 </ul>
 
-<img data-src="https://rspatial.github.io/terra/logo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="getspatialdata" class="slide level2"><h2><a href="https://jakob.schwalb-willmann.de/getSpatialData/">getSpatialData</a></h2>
+<img data-src="https://rspatial.github.io/terra/logo.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="getspatialdata" class="slide level2"><h2><a href="https://jakob.schwalb-willmann.de/getSpatialData/">getSpatialData</a></h2>
 <ul>
 <li>Pacote para fazer download de imagens de satélite.</li>
 </ul>
 
-<img data-src="https://user-images.githubusercontent.com/23257860/84061405-2651d900-a9be-11ea-8038-075efe9a3f36.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="parzer" class="slide level2"><h2><a href="https://docs.ropensci.org/parzer/">parzer</a></h2>
+<img data-src="https://user-images.githubusercontent.com/23257860/84061405-2651d900-a9be-11ea-8038-075efe9a3f36.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="parzer" class="slide level2"><h2><a href="https://docs.ropensci.org/parzer/">parzer</a></h2>
 <ul>
 <li>Pacote para ajudar a limpar coordenadas geográficas para o formato que o R entende.</li>
 </ul>
 
-<img data-src="https://docs.ropensci.org/parzer/logo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="geobr" class="slide level2"><h2><a href="https://ipeagit.github.io/geobr/">geobr</a></h2>
+<img data-src="https://docs.ropensci.org/parzer/logo.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="geobr" class="slide level2"><h2><a href="https://ipeagit.github.io/geobr/">geobr</a></h2>
 <ul>
 <li><p>O pacote <strong>geobr</strong> disponibiliza funções para obter diversas bases de dados <strong>espaciais</strong> oficiais do Brasil.</p></li>
 <li><p>O pacote foi desenvolvido e é mantido pela equipe do <a href="https://www.ipea.gov.br/portal/">IPEA - Instituto de Pesquisa Econômica Aplicada</a>.</p></li>
 <li><p>Você pode saber mais no repositório do pacote no GitHub: <a href="https://ipeagit.github.io/geobr/" class="uri">https://ipeagit.github.io/geobr/</a></p></li>
 </ul>
 
-<img data-src="https://github.com/ipeaGIT/geobr/blob/master/r-package/man/figures/geobr_logo_b.png?raw=true" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="geobr---funções-importantes" class="slide level2"><h2>
+<img data-src="https://github.com/ipeaGIT/geobr/blob/master/r-package/man/figures/geobr_logo_b.png?raw=true" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="geobr---funções-importantes" class="slide level2"><h2>
 <a href="https://ipeagit.github.io/geobr/">geobr</a> - Funções importantes</h2>
 <ul>
 <li><p><code>read_country()</code>: Delimitação do Brasil</p></li>
@@ -539,8 +536,9 @@ Lais Brasileiro + Beatriz Milz
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8d7845c0c7c30a0651d9" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-8d7845c0c7c30a0651d9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"function":["`read_country`","`read_region`","`read_state`","`read_meso_region`","`read_micro_region`","`read_intermediate_region`","`read_immediate_region`","`read_municipality`","`read_municipal_seat`","`read_weighting_area`","`read_census_tract`","`read_statistical_grid`","`read_metro_area`","`read_urban_area`","`read_amazon`","`read_biomes`","`read_conservation_units`","`read_disaster_risk_area`","`read_indigenous_land`","`read_semiarid`","`read_health_facilities`","`read_health_region`","`read_neighborhood`","`read_schools`","`read_comparable_areas`","`read_urban_concentrations`","`read_pop_arrangements`"],"geography":["Country","Region","States","Meso region","Micro region","Intermediate region","Immediate region","Municipality","Municipality seats (sedes municipais)","Census weighting area (área de ponderação)","Census tract (setor censitário)","Statistical Grid of 200 x 200 meters","Metropolitan areas","Urban footprints","Brazil's Legal Amazon","Biomes","Environmental Conservation Units","Disaster risk areas","Indigenous lands","Semi Arid region","Health facilities","Health regions and macro regions","Neighborhood limits","Schools","Historically comparable municipalities, aka Areas minimas comparaveis (AMCs)","Urban concentration areas (concentrações urbanas)","Population arrangements (arranjos populacioanis)"],"source":["IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","MMA","IBGE","MMA","CEMADEN and IBGE","FUNAI","IBGE","CNES, DataSUS","DataSUS","IBGE","INEP","IBGE","IBGE","IBGE"]},"columns":[{"id":"function","name":"function","type":"character"},{"id":"geography","name":"geography","type":"character"},{"id":"source","name":"source","type":"character"}],"defaultPageSize":5,"className":"smaller","dataKey":"b125dea94351ad9a9e2bfbcbd78e3c47"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+
+<div id="htmlwidget-6a982deb48143a862c20" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6a982deb48143a862c20">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"function":["`read_country`","`read_region`","`read_state`","`read_meso_region`","`read_micro_region`","`read_intermediate_region`","`read_immediate_region`","`read_municipality`","`read_municipal_seat`","`read_weighting_area`","`read_census_tract`","`read_statistical_grid`","`read_metro_area`","`read_urban_area`","`read_amazon`","`read_biomes`","`read_conservation_units`","`read_disaster_risk_area`","`read_indigenous_land`","`read_semiarid`","`read_health_facilities`","`read_health_region`","`read_neighborhood`","`read_schools`","`read_comparable_areas`","`read_urban_concentrations`","`read_pop_arrangements`"],"geography":["Country","Region","States","Meso region","Micro region","Intermediate region","Immediate region","Municipality","Municipality seats (sedes municipais)","Census weighting area (área de ponderação)","Census tract (setor censitário)","Statistical Grid of 200 x 200 meters","Metropolitan areas","Urban footprints","Brazil's Legal Amazon","Biomes","Environmental Conservation Units","Disaster risk areas","Indigenous lands","Semi Arid region","Health facilities","Health regions and macro regions","Neighborhood limits","Schools","Historically comparable municipalities, aka Areas minimas comparaveis (AMCs)","Urban concentration areas (concentrações urbanas)","Population arrangements (arranjos populacioanis)"],"source":["IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","MMA","IBGE","MMA","CEMADEN and IBGE","FUNAI","IBGE","CNES, DataSUS","DataSUS","IBGE","INEP","IBGE","IBGE","IBGE"]},"columns":[{"id":"function","name":"function","type":"character"},{"id":"geography","name":"geography","type":"character"},{"id":"source","name":"source","type":"character"}],"defaultPageSize":5,"className":"smaller","dataKey":"b125dea94351ad9a9e2bfbcbd78e3c47"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="pacotes-do-tidyverse" class="slide level2"><h2>Pacotes do <a href="https://tidyverse.org">tidyverse</a>
@@ -551,17 +549,17 @@ Lais Brasileiro + Beatriz Milz
 <li><p><strong>ggplot2</strong>: Pacote para visualização de dados. Possui funções para visualização de dados espaciais vetoriais (<code><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">ggplot2::geom_sf()</a></code>).</p></li>
 </ul>
 
-<img data-src="https://tidyverse.tidyverse.org/logo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="tmap---thematic-maps-in-r" class="slide level2"><h2><a href="https://r-tmap.github.io/tmap/">tmap - thematic maps in R</a></h2>
+<img data-src="https://tidyverse.tidyverse.org/logo.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="tmap---thematic-maps-in-r" class="slide level2"><h2><a href="https://r-tmap.github.io/tmap/">tmap - thematic maps in R</a></h2>
 <ul>
 <li>Pacote para visualização de dados espaciais vetoriais e matriciais.</li>
 </ul>
 
-<img data-src="https://r-tmap.github.io/tmap/articles/tmap_vv_files/figure-html/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="leaflet" class="slide level2"><h2><a href="https://rstudio.github.io/leaflet/">leaflet</a></h2>
+<img data-src="https://r-tmap.github.io/tmap/articles/tmap_vv_files/figure-html/unnamed-chunk-6-1.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="leaflet" class="slide level2"><h2><a href="https://rstudio.github.io/leaflet/">leaflet</a></h2>
 <ul>
 <li>Pacote para visualização interativas de dados espaciais vetoriais e matriciais.</li>
 </ul>
 
-<img data-src="img/leaflet.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><div class="footer">
+<img data-src="img/leaflet.png" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://beatrizmilz.github.io/2023-04-cervejacomdados-fortaleza/#/usando-os-dados-importados">Imagem é a captura de tela deste slide</a></p>
 </div>
 </section></section><section id="vamos-para-um-exemplo-prático" class="title-slide slide level1 center"><h1>Vamos para um exemplo prático!</h1>
@@ -595,6 +593,7 @@ Lais Brasileiro + Beatriz Milz
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -889,9 +888,10 @@ Lais Brasileiro + Beatriz Milz
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      function tippyHover(el, contentFn) {
         const config = {
           allowHTML: true,
+          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -901,17 +901,8 @@ Lais Brasileiro + Beatriz Milz
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start',
+          placement: 'bottom-start'
         };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

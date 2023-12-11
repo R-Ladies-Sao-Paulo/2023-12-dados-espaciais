@@ -17,11 +17,10 @@ library(geobr)
 
 ## Lais Brasileiro
 
--   Me chamo Lais Brasileiro, sou bióloga, cearense e doutoranda em Ecologia pela Universidade de Brasília (UnB). Sempre trabalhei com conservação em suas diversas faces. Atualmente meu trabalho envolve planejamento sistemático para a conservação.
+-   Me chamo Lais Brasileiro, sou bióloga, cearense e doutoranda em Ecologia pela Universidade de Brasília (UnB). Sempre trabalhei com conservação em suas diversas faces. Atualmente meu trabalho envolve planejamento sistemático para a conservação com foco em diversidade funcional de Aves e conectividade ecológica.
 
--   R faz parte do meu cotidiano de pesquisa e participo da coorganização do R-ladies Brasília;
+-   R faz parte do meu cotidiano de pesquisa, participei da coorganização do R-ladies Brasília e já ministrei alguns cursos sobre o uso de dados espaciais com R junto com o R-Ladies Goiânia.
 
--   Tenho como ídolos na minha vida Patti Smith e Marina Silva. E na esfera fictícia, Buffy (sim, a caça vampiros).
 
 ## Beatriz Milz
 
@@ -83,7 +82,7 @@ Fonte: [Geocomputation with R](https://r.geocompx.org/spatial-class)
 
 -   Representação do mundo em uma grade contínua de células de tamanho constante (regular grids)
 
--   Informação agregada espacialmente em uma dada resolução (consistente e escalonável)
+-   Informação agregada espacialmente em uma dada resolução (escalonável)
 
 ![](img/exemplo-raster.png){fig-align="center"}
 
@@ -200,7 +199,12 @@ Fonte: [Curso-R](https://livro.curso-r.com/), adaptado de [R for Data Science](h
 
 -   As etapas são similares ao ciclo de ciência de dados!
 
+![](img/ciclo_dados_espaciais.png){fig-align="center"}
 
+::: footer
+Fonte: [Open-source Tools in R for Landscape Ecology](https://link.springer.com/article/10.1007/s40823-021-00067-y), Hasselbarth et al. (2021)
+:::
+ 
 # Principais pacotes
 
 ## [sf (Simple Features for R)](https://r-spatial.github.io/sf/)
