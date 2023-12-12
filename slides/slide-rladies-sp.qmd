@@ -4,6 +4,7 @@ author: "[R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/)"
 date: "2023-12-12"
 format: 
   rladies-revealjs:
+    logo: "https://rladies-sp.org/img/logo.jpg"
     footer: "Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html) e [Quarto R-Ladies Theme](https://github.com/beatrizmilz/quarto-rladies-theme#quarto-r-ladies-theme)."
 incremental: false
 ---

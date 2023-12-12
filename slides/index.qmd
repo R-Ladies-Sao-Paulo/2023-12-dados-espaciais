@@ -4,6 +4,7 @@ author: "Lais Brasileiro + Beatriz Milz"
 date: "2023-12-12"
 format: 
   rladies-revealjs:
+    logo: "https://rladies-sp.org/img/logo.jpg"
     code-link: true
     footer: "Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html) e [Quarto R-Ladies Theme](https://github.com/beatrizmilz/quarto-rladies-theme#quarto-r-ladies-theme)."
 incremental: false
@@ -34,6 +35,8 @@ library(geobr)
     -   2014-2015: Núcleo técnico de Gestão Ambiental/Secretaria de Segurança Urbana/Prefeitura Municipal de São Paulo
     -   2016-2018: Mestrado no Programa de Pós Graduação em Análise Ambiental Integrada na UNIFESP, Campus Diadema.
     -   2019 em diante: aulas na Curso-R, projetos de consultoria, minha pesquisa de doutorado, etc.
+    
+<https://beamilz.com>
 
 # Plano para hoje!
 
