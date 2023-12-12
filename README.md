@@ -26,7 +26,7 @@
 
 ``` r
 pacotes_necessarios <- c("httr",  "readxl", "janitor", "dplyr", "parzer", "glue",
-"sf", "ggplot2", "leaflet", "geobr", "terra", "mapivew", "curl")
+"sf", "ggplot2", "leaflet", "geobr", "terra", "mapview", "curl")
 
 install.packages("pacotes_necessarios")
 ```
