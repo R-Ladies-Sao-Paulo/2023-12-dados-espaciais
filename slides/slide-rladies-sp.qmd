@@ -126,10 +126,3 @@ Primeira edição em novembro/2022.
 
 <https://cienciadedatos.github.io/pt-r4ds/>
 
-## Grupo de estudos para 2024
-
--   Interesse: <https://forms.gle/fEAptgHgNXbLTPWy6>
-
--   Mais informações: <https://github.com/R-Ladies-Sao-Paulo/2024-grupo-de-estudos-r4ds/tree/main#readme>
-
-![](img/grupo de estudos.png){fig-align="center" width="30%"}
