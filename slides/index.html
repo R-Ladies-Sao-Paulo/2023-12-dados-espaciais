@@ -419,17 +419,31 @@ Lais Brasileiro + Beatriz Milz
 </li>
 </ul></section><section id="sistema-de-coordenadas-geográficas-e-projeção-espacial" class="slide level2"><h2>Sistema de coordenadas geográficas e projeção espacial</h2>
 <ul>
-<li><p><strong>CRS:</strong> Define como os elementos espaciais do dado se relaciona com a superfície da Terra.</p></li>
 <li>
-<p><strong>Sistema de coordenadas geográficas</strong> identificam qualquer lugar na terra a partir de dois valores:</p>
+<p><strong>Sistema de coordenadas geográficas (CRS)</strong> identificam qualquer lugar na terra a partir de dois valores:</p>
 <ul>
-<li><p><strong>Longitude</strong>: distância em graus de um ponto até o Meridiano de Greenwich (0°).</p></li>
-<li><p><strong>Latitude</strong>: distância em graus de um ponto até o Equador (0°).</p></li>
+<li>
+<strong>Longitude</strong>: distância angular de um ponto do globo que descreve a localização de um lugar na Terra medido em graus, de zero a 180 para leste ou para oeste, a partir do Meridiano de Greenwich.</li>
 </ul>
 </li>
 </ul>
-<p><strong>Importante:</strong> As posições de Long e Lat são medidas em distância angular (graus).</p>
-</section><section id="section" class="slide level2"><h2></h2>
+
+<img data-src="img/Longitudes.png" class="r-stretch quarto-figure-center"></section><section id="section" class="slide level2"><h2></h2>
+<ul>
+<li>
+<p><strong>Sistema de coordenadas geográficas (CRS)</strong> identificam qualquer lugar na terra a partir de dois valores:</p>
+<ul>
+<li>
+<strong>Latitude</strong>: distância angular de um ponto do globo, medida por um arco do meridiano entre esse ponto e o equador terrestre e variando de 0° a 90° para o norte ou para o sul.</li>
+</ul>
+</li>
+</ul>
+
+<img data-src="img/Latitudes.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Fonte: <a href="https://gsp.humboldt.edu/olm/Lessons/GIS/01%20SphericalCoordinates/Latitude_and_Longitude.html">Humboldt Edu</a>.</p>
+</div>
+</section><section id="section-1" class="slide level2"><h2></h2>
+<p><strong>Importante:</strong> Sistemas geográficos de coordenadas representam a Terra como uma esfera, já sistemas projetados representam a terra como um plano.</p>
 
 <img data-src="img/CRS.png" class="r-stretch quarto-figure-center"><p>Ponto azul representa a origem do CRS e ponto vermelho a coordenada de localização de Londres.</p>
 <div class="footer">
@@ -439,7 +453,7 @@ Lais Brasileiro + Beatriz Milz
 <p>Para a definição de um sistema de coordenadas geográficas é necessário escolher uma forma de representar a superfície da Terra:</p>
 
 <img data-src="img/datum.png" class="r-stretch quarto-figure-center"><div class="footer">
-<p>Fonte: ??</p>
+<p>Fonte:</p>
 </div>
 </section><section id="projeções-1" class="slide level2"><h2>Projeções</h2>
 <ul>
@@ -448,21 +462,6 @@ Lais Brasileiro + Beatriz Milz
 <li><p><a href="https://www.jasondavies.com/maps/transition/">Projeções sempre geram distorções</a>.</p></li>
 </ul>
 <div class="footer">
-<p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
-</div>
-</section><section id="exemplo-projeção-cilíndrica" class="slide level2"><h2>Exemplo: Projeção cilíndrica</h2>
-
-<img data-src="img/projecao-cilindrica.png" class="r-stretch quarto-figure-center"><div class="footer">
-<p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
-</div>
-</section><section id="exemplo-projeção-cônica" class="slide level2"><h2>Exemplo: Projeção cônica</h2>
-
-<img data-src="img/projecao-conica.png" class="r-stretch quarto-figure-center"><div class="footer">
-<p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
-</div>
-</section><section id="exemplo-projeção-plana" class="slide level2"><h2>Exemplo: Projeção plana</h2>
-
-<img data-src="img/projecao-plana.png" class="r-stretch quarto-figure-center"><div class="footer">
 <p>Fonte: <a href="https://gisgeography.com/map-projections/" class="uri">https://gisgeography.com/map-projections/</a></p>
 </div>
 </section></section><section><section id="ciclo-de-ciência-de-dados" class="title-slide slide level1 center"><h1>Ciclo de ciência de dados</h1>
@@ -537,8 +536,8 @@ Lais Brasileiro + Beatriz Milz
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="htmlwidget-6a982deb48143a862c20" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-6a982deb48143a862c20">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"function":["`read_country`","`read_region`","`read_state`","`read_meso_region`","`read_micro_region`","`read_intermediate_region`","`read_immediate_region`","`read_municipality`","`read_municipal_seat`","`read_weighting_area`","`read_census_tract`","`read_statistical_grid`","`read_metro_area`","`read_urban_area`","`read_amazon`","`read_biomes`","`read_conservation_units`","`read_disaster_risk_area`","`read_indigenous_land`","`read_semiarid`","`read_health_facilities`","`read_health_region`","`read_neighborhood`","`read_schools`","`read_comparable_areas`","`read_urban_concentrations`","`read_pop_arrangements`"],"geography":["Country","Region","States","Meso region","Micro region","Intermediate region","Immediate region","Municipality","Municipality seats (sedes municipais)","Census weighting area (área de ponderação)","Census tract (setor censitário)","Statistical Grid of 200 x 200 meters","Metropolitan areas","Urban footprints","Brazil's Legal Amazon","Biomes","Environmental Conservation Units","Disaster risk areas","Indigenous lands","Semi Arid region","Health facilities","Health regions and macro regions","Neighborhood limits","Schools","Historically comparable municipalities, aka Areas minimas comparaveis (AMCs)","Urban concentration areas (concentrações urbanas)","Population arrangements (arranjos populacioanis)"],"source":["IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","MMA","IBGE","MMA","CEMADEN and IBGE","FUNAI","IBGE","CNES, DataSUS","DataSUS","IBGE","INEP","IBGE","IBGE","IBGE"]},"columns":[{"id":"function","name":"function","type":"character"},{"id":"geography","name":"geography","type":"character"},{"id":"source","name":"source","type":"character"}],"defaultPageSize":5,"className":"smaller","dataKey":"b125dea94351ad9a9e2bfbcbd78e3c47"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fad2a080ac1addf22c7d" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-fad2a080ac1addf22c7d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"function":["`read_country`","`read_region`","`read_state`","`read_meso_region`","`read_micro_region`","`read_intermediate_region`","`read_immediate_region`","`read_municipality`","`read_municipal_seat`","`read_weighting_area`","`read_census_tract`","`read_statistical_grid`","`read_metro_area`","`read_urban_area`","`read_amazon`","`read_biomes`","`read_conservation_units`","`read_disaster_risk_area`","`read_indigenous_land`","`read_semiarid`","`read_health_facilities`","`read_health_region`","`read_neighborhood`","`read_schools`","`read_comparable_areas`","`read_urban_concentrations`","`read_pop_arrangements`"],"geography":["Country","Region","States","Meso region","Micro region","Intermediate region","Immediate region","Municipality","Municipality seats (sedes municipais)","Census weighting area (área de ponderação)","Census tract (setor censitário)","Statistical Grid of 200 x 200 meters","Metropolitan areas","Urban footprints","Brazil's Legal Amazon","Biomes","Environmental Conservation Units","Disaster risk areas","Indigenous lands","Semi Arid region","Health facilities","Health regions and macro regions","Neighborhood limits","Schools","Historically comparable municipalities, aka Areas minimas comparaveis (AMCs)","Urban concentration areas (concentrações urbanas)","Population arrangements (arranjos populacioanis)"],"source":["IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","IBGE","MMA","IBGE","MMA","CEMADEN and IBGE","FUNAI","IBGE","CNES, DataSUS","DataSUS","IBGE","INEP","IBGE","IBGE","IBGE"]},"columns":[{"id":"function","name":"function","type":"character"},{"id":"geography","name":"geography","type":"character"},{"id":"source","name":"source","type":"character"}],"defaultPageSize":5,"className":"smaller","dataKey":"b125dea94351ad9a9e2bfbcbd78e3c47"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="pacotes-do-tidyverse" class="slide level2"><h2>Pacotes do <a href="https://tidyverse.org">tidyverse</a>

@@ -21,7 +21,6 @@ library(geobr)
 
 -   R faz parte do meu cotidiano de pesquisa, participei da coorganização do R-ladies Brasília e já ministrei alguns cursos sobre o uso de dados espaciais com R junto com o R-Ladies Goiânia.
 
-
 ## Beatriz Milz
 
 -   Doutoranda em Ciência Ambiental no IEE/USP
@@ -106,7 +105,6 @@ Fonte: [Geocomputation with R](https://r.geocompx.org/spatial-class)
 Fonte: [Imagem 1](https://www.neonscience.org/resources/learning-hub/tutorials/dc-multiband-rasters-r) e [Imagem 2](https://edzer.github.io/UseR2019/part1.html).
 :::
 
-
 ## Dados matriciais (ou raster)
 
 -   Exemplos:
@@ -119,17 +117,27 @@ Fonte: [Imagem 1](https://www.neonscience.org/resources/learning-hub/tutorials/d
 
 ## Sistema de coordenadas geográficas e projeção espacial
 
--   **CRS:** Define como os elementos espaciais do dado se relaciona com a superfície da Terra.
+-   **Sistema de coordenadas geográficas (CRS)** identificam qualquer lugar na terra a partir de dois valores:
 
--   **Sistema de coordenadas geográficas** identificam qualquer lugar na terra a partir de dois valores:
+    -   **Longitude**: distância angular de um ponto do globo que descreve a localização de um lugar na Terra medido em graus, de zero a 180 para leste ou para oeste, a partir do Meridiano de Greenwich.
 
-    -   **Longitude**: distância em graus de um ponto até o Meridiano de Greenwich (0°).
-
-    -   **Latitude**: distância em graus de um ponto até o Equador (0°).
-
-**Importante:** As posições de Long e Lat são medidas em distância angular (graus).
+![](img/Longitudes.png){fig-align="center"}
 
 ## 
+
+-   **Sistema de coordenadas geográficas (CRS)** identificam qualquer lugar na terra a partir de dois valores:
+
+    -   **Latitude**: distância angular de um ponto do globo, medida por um arco do meridiano entre esse ponto e o equador terrestre e variando de 0° a 90° para o norte ou para o sul.
+
+![](img/Latitudes.png){fig-align="center"}
+
+::: footer
+Fonte: [Humboldt Edu](https://gsp.humboldt.edu/olm/Lessons/GIS/01%20SphericalCoordinates/Latitude_and_Longitude.html).
+:::
+
+## 
+
+**Importante:** Sistemas geográficos de coordenadas representam a Terra como uma esfera, já sistemas projetados representam a terra como um plano.
 
 ![](img/CRS.png){fig-align="center"}
 
@@ -146,7 +154,7 @@ Para a definição de um sistema de coordenadas geográficas é necessário esco
 ![](img/datum.png){fig-align="center"}
 
 ::: footer
-Fonte: ??
+Fonte: 
 :::
 
 ## Projeções
@@ -161,30 +169,7 @@ Fonte: ??
 Fonte: <https://gisgeography.com/map-projections/>
 :::
 
-## Exemplo: Projeção cilíndrica
-
-![](img/projecao-cilindrica.png){fig-align="center"}
-
-::: footer
-Fonte: <https://gisgeography.com/map-projections/>
-:::
-
-## Exemplo: Projeção cônica
-
-![](img/projecao-conica.png){fig-align="center"}
-
-::: footer
-Fonte: <https://gisgeography.com/map-projections/>
-:::
-
-## Exemplo: Projeção plana
-
-![](img/projecao-plana.png){fig-align="center"}
-
-::: footer
-Fonte: <https://gisgeography.com/map-projections/>
-:::
-
+ 
 # Ciclo de ciência de dados
 
 ## Ciclo de ciência de dados
@@ -204,12 +189,12 @@ Fonte: [Curso-R](https://livro.curso-r.com/), adaptado de [R for Data Science](h
 ::: footer
 Fonte: [Open-source Tools in R for Landscape Ecology](https://link.springer.com/article/10.1007/s40823-021-00067-y), Hasselbarth et al. (2021)
 :::
- 
+
 # Principais pacotes
 
 ## [sf (Simple Features for R)](https://r-spatial.github.io/sf/)
 
-- Pacote para manipulação de dados espaciais vetoriais.
+-   Pacote para manipulação de dados espaciais vetoriais.
 
 [![](img/sf_horst.png){fig-align="center" width="90%"}](https://github.com/allisonhorst/stats-illustrations)
 
@@ -217,7 +202,7 @@ Fonte: [Open-source Tools in R for Landscape Ecology](https://link.springer.com/
 Fonte da imagem: <https://github.com/allisonhorst/stats-illustrations>
 :::
 
----
+------------------------------------------------------------------------
 
 ![](img/sf_page-0001.jpg){fig-align="center" width="90%"}
 
@@ -225,7 +210,7 @@ Fonte da imagem: <https://github.com/allisonhorst/stats-illustrations>
 Fonte: <https://github.com/rstudio/cheatsheets/blob/main/sf.pdf>
 :::
 
----
+------------------------------------------------------------------------
 
 ![](img/sf_page-0002.jpg){fig-align="center" width="90%"}
 
@@ -233,31 +218,25 @@ Fonte: <https://github.com/rstudio/cheatsheets/blob/main/sf.pdf>
 Fonte: <https://github.com/rstudio/cheatsheets/blob/main/sf.pdf>
 :::
 
-
-
-
-
 ## [terra](https://rspatial.github.io/terra/index.html)
 
--  Pacote para manipulação e modelagem de dados espaciais vetoriais e matriciais.
+-   Pacote para manipulação e modelagem de dados espaciais vetoriais e matriciais.
 
 ![](https://rspatial.github.io/terra/logo.png){fig-align="center" width="90%"}
 
-
 ## [getSpatialData](https://jakob.schwalb-willmann.de/getSpatialData/)
 
- - Pacote para fazer download de imagens de satélite.
- 
+-   Pacote para fazer download de imagens de satélite.
+
 ![](https://user-images.githubusercontent.com/23257860/84061405-2651d900-a9be-11ea-8038-075efe9a3f36.png){fig-align="center" width="90%"}
 
 ## [parzer](https://docs.ropensci.org/parzer/)
 
-- Pacote para ajudar a limpar coordenadas geográficas para o formato que o R entende.
+-   Pacote para ajudar a limpar coordenadas geográficas para o formato que o R entende.
 
 ![](https://docs.ropensci.org/parzer/logo.png){fig-align="center" width="90%"}
 
-
-##  [geobr](https://ipeagit.github.io/geobr/)
+## [geobr](https://ipeagit.github.io/geobr/)
 
 -   O pacote **geobr** disponibiliza funções para obter diversas bases de dados **espaciais** oficiais do Brasil.
 
@@ -291,7 +270,6 @@ geobr::list_geobr() |>
                        defaultPageSize = 5, class = "smaller")
 ```
 
-
 ## Pacotes do [tidyverse](https://tidyverse.org)
 
 -   **dplyr**: Pacote para manipulação de dados.
@@ -302,25 +280,21 @@ geobr::list_geobr() |>
 
 ![](https://tidyverse.tidyverse.org/logo.png){fig-align="center" width="90%"}
 
-## [tmap -  thematic maps in R](https://r-tmap.github.io/tmap/)
+## [tmap - thematic maps in R](https://r-tmap.github.io/tmap/)
 
--  Pacote para visualização de dados espaciais vetoriais e matriciais. 
-
+-   Pacote para visualização de dados espaciais vetoriais e matriciais.
 
 ![](https://r-tmap.github.io/tmap/articles/tmap_vv_files/figure-html/unnamed-chunk-6-1.png){fig-align="center" width="90%"}
 
-
 ## [leaflet](https://rstudio.github.io/leaflet/)
 
--   Pacote para visualização interativas de dados espaciais vetoriais e matriciais. 
-
+-   Pacote para visualização interativas de dados espaciais vetoriais e matriciais.
 
 ![](img/leaflet.png){fig-align="center" width="90%"}
 
-:::footer
+::: footer
 [Imagem é a captura de tela deste slide](https://beatrizmilz.github.io/2023-04-cervejacomdados-fortaleza/#/usando-os-dados-importados)
 :::
-
 
 # Vamos para um exemplo prático!
 
