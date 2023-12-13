@@ -14,11 +14,11 @@
 
 -   **Laís Brasileiro**
 
-    -   Email: [laisbioufc\@gmail.com](mailto:laisbioufc@gmail.com)
+    -   Email: [laisbioufc@gmail.com](mailto:laisbioufc@gmail.com)
 
 -   **Beatriz Milz**
 
-    -   Email: [milz.bea\@gmail.com](mailto:milz.bea@gmail.com)
+    -   Email: [milz.bea@gmail.com](mailto:milz.bea@gmail.com)
     -   Website: <https://beamilz.com>
 
 
