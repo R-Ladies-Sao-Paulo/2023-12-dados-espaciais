@@ -10,6 +10,8 @@
 
 **Inscrições:** <https://www.meetup.com/pt-BR/rladies-sao-paulo/>
 
+**Gravação:** <https://www.youtube.com/watch?v=B5VoI9d9Dm8>
+
 ## Palestrantes
 
 -   **Laís Brasileiro**
