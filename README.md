@@ -66,3 +66,20 @@ if (!file.exists("dados/brasil_coverage_2022.tif")) {
 -   [Código da prática - Parte 1](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/praticas/pratica-parte-1.R)
 
 -   [Código da prática - Parte 2](https://github.com/R-Ladies-Sao-Paulo/2023-12-dados-espaciais/blob/main/praticas/pratica-parte-2.R)
+
+
+## Links citados no chat
+
+- [Plataforma MapBiomas](https://plataforma.brasil.mapbiomas.org/)
+
+- [Consultar código dos municípios no IBGE](https://www.ibge.gov.br/explica/codigos-dos-municipios.php)
+
+- [Concurso para trabalhar no IPEA](https://www.ipea.gov.br/concurso)
+
+- [Explorar Leaflet providers](https://leaflet-extras.github.io/leaflet-providers/preview/)
+
+- [Consultar EPSG - Sistemas de coordenadas](https://epsg.io/4326)
+
+- [SIGBM - base de dados usada na atividade](https://app.anm.gov.br/SIGBM/Publico/ClassificacaoNacionalDaBarragem)
+
+- [Blog da R-Ladies SP](https://rladies-sp.org/posts/2023-12-um-ano-blog/)
