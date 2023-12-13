@@ -63,9 +63,10 @@ sf::st_crs(sigbm)
 
 library(ggplot2)
 
-sigbm |>
+sigbm |> 
   ggplot() +
   geom_sf()
+
 
 # Vamos para a visualização interativa, e depois voltamos
 
@@ -94,6 +95,8 @@ sigbm |>
   leaflet() |>
   # Adiciona as barragens
   addMarkers()
+
+leaflet::providers
 
 # Versão 3: vamos adicionar um fundo de mapa
 sigbm |>
@@ -140,6 +143,8 @@ sigbm |>
 
 # Vamos exportar a base do sigbm já tratada
 readr::write_rds(sigbm, "dados-output/sigbm.rds")
+
+sf::write_sf(sigbm, "dados-output/sigbm_sf.shp")
 
 # Até agora usamos:
 # pacote parzer para limpar lat/long
